@@ -1,0 +1,1490 @@
+{
+	"rule": {
+		"1658716886552": {
+			"info": {
+				"id": 1658716886552,
+				"url": "https://www.yhdmw.com",
+				"name": "樱花w",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"grap": {
+				"index": {
+					"searchOkBtn": "$s:https://www.yhdmw.com/comicsearch/-------------.html?wd=${value}&submit="
+				},
+				"search": {
+					"list": "html>body>div.container.min>div.row>div.col-md-wide-7.col-xs-1>div.myui-panel.myui-panel-bg.clearfix>div.myui-panel-box.clearfix>div.myui-panel_bd.col-pd.clearfix>ul.myui-vodlist__media.clearfix#searchList",
+					"item": "li.clearfix",
+					"name": "a.searchkey",
+					"url": "a.searchkey"
+				},
+				"list": {
+					"list": "$c:const list1 = []\n$('.nav-tabs').eq(0).each((i, it)=> {\n\t\tconst arr = []\n\t\t$('.tab-content .tab-pane').eq(i).find('li').each((ii, li) => {\n\t\t\tvar $a = $(li).find('a')\n\t\tarr.push({\"title\":$a.text(),\"url\":$a.attr('href')})\n\t})\n\tlist1.push(arr)\n})\nreturn list1"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1660568350714": {
+			"info": {
+				"id": 1660568350714,
+				"url": "https://www.tqhm.cc/",
+				"name": "美丽",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.tqhm.cc/",
+				"search": "https://www.tqhm.cc/artsearch/-------.html?wd=%E7%BE%8E%E4%B8%BD%E6%96%B0%E4%B8%96%E7%95%8C",
+				"list": "https://www.tqhm.cc/manhua-60.html",
+				"detail": "https://www.tqhm.cc/manhua-60-2.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>div.header-all>div.top.clearfix>ul.search.clearfix>form#formsearch>input.input#wd",
+					"searchOkBtn": "html>body>div.header-all>div.top.clearfix>ul.search.clearfix>form#formsearch>input.imgbt"
+				},
+				"search": {
+					"list": "html>body>div.main>div.index-area.clearfix",
+					"item": "span.lzbz",
+					"name": "p.name",
+					"url": "p.name"
+				},
+				"list": {
+					"list": "html>body>div.main>div.tab-down.mb.clearfix#stab1>div.playlist.clearfix#stab81>div.videourl.clearfix#vlink_1",
+					"item": "li",
+					"name": "a",
+					"url": "a"
+				},
+				"detail": {
+					"content": "$c:var arr = [];\n$('html>body>div.main>div.playerall').find('.lazy').each((i,it) =>\n{ arr.push($(it).attr('data-original'))})\nreturn arr",
+					"pageRule": "$s:${pageIndex}。18",
+					"correctMar": null
+				}
+			},
+			"downloadTime": 1660608463
+		},
+		"1660695865096": {
+			"info": {
+				"id": 1660695865096,
+				"url": "https://www.cocomanga.com/",
+				"name": "COCO漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.cocomanga.com/",
+				"search": "https://www.cocomanga.com/search?type=1&searchString=%E6%B8%B8%E6%88%8F",
+				"list": "https://www.cocomanga.com/23193/",
+				"detail": "https://www.cocomanga.com/23193/1/48.html"
+			},
+			"grap": {
+				"search": {
+					"list": "html>body.fed-min-width>div.fed-main-info.fed-min-width>div.fed-part-case>div.fed-part-rows>div.fed-main-left.fed-col-xs12.fed-col-md9>div.theiaStickySidebar>div.fed-part-layout.fed-back-whits",
+					"item": "dl.fed-deta-info.fed-deta-padding.fed-line-top.fed-margin.fed-part-rows.fed-part-over",
+					"name": "h1.fed-part-eone.fed-font-xvi",
+					"url": "h1.fed-part-eone.fed-font-xvi"
+				},
+				"list": {
+					"list": "html>body.fed-min-width>div.fed-main-info.fed-min-width>div.fed-part-case>div.fed-tabs-info.fed-rage-foot.fed-part-rows.fed-part-layout.fed-back-whits.fed-play-data>div.fed-tabs-boxs>div.fed-tabs-item.fed-drop-info.fed-visible>div.fed-drop-boxs.fed-drop-btms.fed-matp-v>div.fed-play-item.fed-drop-item.fed-visible>div.all_data_list",
+					"item": "a.fed-btns-info.fed-rims-info.fed-part-eone",
+					"name": "a.fed-btns-info.fed-rims-info.fed-part-eone",
+					"url": "a.fed-btns-info.fed-rims-info.fed-part-eone"
+				},
+				"index": {
+					"searchOkBtn": "$s:https://www.cocomanga.com/search?type=1&searchString=${value}"
+				},
+				"detail": {
+					"content": "$c:var $mpc = $('.mh_comicpic')\n__cr.showPic(1)\n__cr.showPic($mpc.length)\nsetTimeout(() => {\n  var arr = []\n  $mpc.each((i, it) => {\n\t\tvar src = $(it).find('img').attr('src')\n\t\tsrc = src.slice(0,2) === '//' ? 'https:'+src: src\n    arr.push(src)\n  })\n  setDataList(arr)\n}, 500)\n"
+				}
+			}
+		},
+		"1662345518014": {
+			"info": {
+				"id": 1662345518014,
+				"url": "http://www.iewoai.com/",
+				"name": "vomic漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "http://www.iewoai.com/",
+				"search": "http://www.iewoai.com/search?title=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"list": "http://www.iewoai.com/7a1d65f500f452b785c55594c6a4f966_c/"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>div.header>div.container>div.input-form>input#txtKeywords",
+					"searchOkBtn": "html>body>div.header>div.container>div.input-form>a.input-form-btn#btnSearch>img.input-form-search-logo"
+				},
+				"search": {
+					"list": "html>body>div.container>ul.mh-list",
+					"item": "div.mh-item",
+					"name": "h2.title",
+					"url": "h2.title"
+				},
+				"list": {
+					"list": "html>body>div.container>div.detail-list-form-con#chapterlistload",
+					"item": "a.detail-list-form-item",
+					"name": "a.detail-list-form-item",
+					"url": "a.detail-list-form-item"
+				},
+				"detail": {
+					"content": "$c:var arr = []\n$('#showimage img').each((i,it) => {\n\n    arr.push($(it).attr('data-original'))\n})\nreturn arr"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1653617520862": {
+			"info": {
+				"id": 1653617520862,
+				"url": "https://qianoo.cn/",
+				"name": "qianoo",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://qianoo.cn/",
+				"search": "https://qianoo.cn/xssearch?q=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"list": "https://qianoo.cn/movie/839.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body.home.blog.custom-background>header.nav#header>div.mikd>div.el-row>div.el-col.el-col-24.el-col-xs-15.el-col-sm-16.el-col-md-5.el-col-lg-5.el-col-xl-5>div.souuo>div#sosuobox>form.w-search-form.show_hidden>input.soiput#s",
+					"searchOkBtn": "html>body.home.blog.custom-background>header.nav#header>div.mikd>div.el-row>div.el-col.el-col-24.el-col-xs-15.el-col-sm-16.el-col-md-5.el-col-lg-5.el-col-xl-5>div.souuo>div#sosuobox>form.w-search-form.show_hidden>button.souicon>i.glyph-icon.flaticon-magnifying-glass32"
+				},
+				"search": {
+					"list": "html>body.custom-background>div.mikd>div.mi_cont>div.bt_img.mi_ne_kd.search_list",
+					"item": "li",
+					"name": "h3.dytit",
+					"url": "li"
+				},
+				"list": {
+					"list": "html>body.movie_bt-template-default.single.single-movie_bt.postid-839.custom-background.btf-archive>div.mikd>div.mi_paly_box>div.mi_ne_kd",
+					"item": "a.play_movie",
+					"name": "a.play_movie",
+					"url": "a.play_movie"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1652167481356": {
+			"info": {
+				"id": 1652167481356,
+				"url": "https://www.k8dm.com/",
+				"name": "k8动漫",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.k8dm.com/",
+				"search": "https://www.k8dm.com/index.php/vod/search/wd/%E8%80%BD%E7%BE%8E.html",
+				"list": "https://www.k8dm.com/index.php/vod/detail/id/9307.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body.fed-min-width>div.fed-head-info.fed-back-whits.fed-min-width.fed-box-shadow>div.fed-part-case>div.fed-navs-info>div.fed-navs-search.fed-back-whits.fed-hidden.fed-conceal.fed-show-sm-block>form.fed-navs-form>input.fed-navs-input.fed-back-ashen.fed-event",
+					"searchOkBtn": "$s:https://www.k8dm.com/index.php/vod/search.html?wd=${value}"
+				},
+				"search": {
+					"list": "html>body.fed-min-width>div.fed-main-info.fed-min-width>div.fed-part-case>div.fed-part-layout.fed-back-whits",
+					"item": ".fed-part-rows.fed-part-over",
+					"name": ".fed-font-xvi",
+					"url": "a"
+				},
+				"list": {
+					"list": "$c:var arr = []\n$('.fed-tabs-boxs .fed-tabs-item')\n  .eq(0)\n  .find('.fed-play-item')\n  .each((i, it) => {\n    arr[i] = []\n    $(it)\n      .find('.fed-part-rows li')\n      .each((j, li) => {\n        var $a = $(li).find('a')\n        arr[i].push({\n          name: $a.text(),\n          url: $a.attr('href'),\n        })\n      })\n    arr[i] = arr[i].filter(\n      (it) => it.url && it.url.indexOf('javascript') === -1\n    )\n  })\nreturn arr",
+					"item": "li",
+					"name": "a",
+					"url": "a"
+				}
+			},
+			"downloadTime": 1689870162,
+			"key": 1652167481356
+		},
+		"1647867733989": {
+			"info": {
+				"id": 1647867733989,
+				"url": "https://www.bkmeiju.com/",
+				"name": "美剧网",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.bkmeiju.com/index.php",
+				"search": "https://www.bkmeiju.com/search.php?searchword=%E8%80%81%E5%8F%8B%E8%AE%B0",
+				"list": "https://www.bkmeiju.com/content/17993.html",
+				"detail": "https://www.bkmeiju.com/play/74827-2-0.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body.home.blog.search_not.focusslide_s_m.ui-navtop.zh>header.header>div.container.header>form.search-form#formsearch>input.form-control",
+					"searchOkBtn": "html>body.home.blog.search_not.focusslide_s_m.ui-navtop.zh>header.header>div.container.header>form.search-form#formsearch>input.btn"
+				},
+				"search": {
+					"list": "html>body.archive.category.category-kehuanpian.category-9.search_not.focusslide_s_m.ui-navtop.zh>section.container>div.content-wrap>div.content>ul.masonry.clearfix#post_container",
+					"item": "div.post_hover",
+					"name": "h2",
+					"url": "div.post_hover"
+				},
+				"list": {
+					"list": "$c:const arr = []\n$('#tv_tab ul.abc').each((i, it) => {\n\tarr[i] = []\n\t$(it).find('li').each((idx,li) => {\n\t\tconst $a = $(li).find('a')\n\t\t arr[i].push({\n\t\t\t url: $a.attr('href'),\n\t\t\t name: $a.text()\n\t\t })\n\t})\n})\nreturn arr",
+					"item": "li",
+					"name": "a",
+					"url": "a"
+				}
+			},
+			"downloadTime": 1676777451
+		},
+		"1656292374229": {
+			"info": {
+				"id": 1656292374229,
+				"url": "https://bada.iqiyi.com/",
+				"name": "爱奇艺叭嗒",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://bada.iqiyi.com/",
+				"search": "https://bada.iqiyi.com/manhua/search-keyword=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"detail": "https://bada.iqiyi.com/manhua/reader/18yzrsbkwl_18yyz1q6h5.html",
+				"list": "https://bada.iqiyi.com/manhua/detail_18yzrsbkwl.html"
+			},
+			"grap": {
+				"search": {
+					"list": "html.supports.csstransforms3d.csstransitions.csstransforms>body>div.mod-wrapper>div.mod-con.clearfix>div.mod-main.mod-ser.fl>ul.stacksList",
+					"item": "div.stacksBook-con.pr",
+					"name": "h3.stacksBook-tit",
+					"url": "h3.stacksBook-tit"
+				},
+				"index": {
+					"searchOkBtn": "$s:https://bada.iqiyi.com/manhua/search-keyword=${value}"
+				},
+				"list": {
+					"list": "$c:var a = window.location.href.split('/')\nvar comicId = a[a.length-1].split('.')[0].replace('detail_', '')\n$.ajax({\n  url: 'https://bada.iqiyi.com/manhua/catalog/'+comicId,\n  method: 'GET',\n  success: function (e) {\n    var arr = e.data.episodes\n\t\t// console.log(arr)\n\t\tsetDataList(arr.map(it => ({\n\t\t\ttitle: it.episodeTitle,\n\t\t\turl: '/manhua/reader/'+it.comicId+'_'+it.episodeId+'.html',\n\t\t})))\n  }\n})"
+				},
+				"detail": {
+					"content": "$c:var arr = [];\n$('.main-container img').each((i,it) => {\n    var $img = $(it)\n    arr.push($img.attr('data-original') || $img.attr('src'))\n})\nreturn arr"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1653371949940": {
+			"info": {
+				"id": 1653371949940,
+				"url": "https://www.haoman8.com/",
+				"name": "hm8",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.haoman8.com/",
+				"search": "https://www.haoman8.com/index.php/search?key=%E6%96%97%E7%A0%B4",
+				"list": "https://www.haoman8.com/comic/8818"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>div.acgn-clearfix>div.acgn-col-24.acgn-col-space-none>div.acgn-model.acgn-model-header.acgn-clearfix#m_202146_1092_1288>div.block-wrap.block-wrap-fixed>div.acgn-row>div.acgn-col-24>div.block-float.block-float-right>div.func-menu>div.search>div.search-wrap>input.search-input#J_searchKeywords",
+					"searchOkBtn": "$s:https://www.haoman8.com/index.php/search?key=${value}"
+				},
+				"search": {
+					"list": "html>body>div.acgn-container>div.acgn-row>div.acgn-col-24>div.acgn-tabs.acgn-sort-content>div.acgn-bd.acgn-mb24>div.acgn-tabs-item>ul.acgn-comic-list.sort-comic-list.acgn-col6.acgn-clearfix",
+					"item": "li.acgn-item",
+					"name": "h3.acgn-title",
+					"url": "li.acgn-item"
+				},
+				"list": {
+					"list": "$eval:return window.chapter_list.map(it => ({title:it.name, url: it.url}))"
+				},
+				"detail": {
+					"content": "$c:var arr = [];\n$('.acgn-reader-chapter__scroll-box .pic-box').each((i,it) => {\n    arr.push($(it).find('img').attr('data-echo'))\n})\nreturn arr"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1653445785934": {
+			"info": {
+				"id": 1653445785934,
+				"url": "https://www.ikanm8.com/",
+				"name": "i看漫(国漫)ajax",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.ikanm8.com/",
+				"search": "https://www.ikanm8.com/search?keyword=%E6%96%97%E7%A0%B4",
+				"list": "https://www.ikanm8.com/manhua/1168/",
+				"detail": "https://www.ikanm8.com/chapter/158597.html"
+			},
+			"grap": {
+				"search": {
+					"list": "html>body>div.container>div.container.top-padding>div.row>div.classify-main>div.warp-main>div.tabs.tabs2.tabs-click>div.bd>div.tabs-item>div#comicListBox>ul.comic-list.col5.clearfix",
+					"item": "li.item",
+					"name": "h3.title",
+					"url": "li.item"
+				},
+				"list": {
+					"list": "html>body>div.container>div.container.top-padding>div.row.mt16>div.detail-main>div.warp-main>div.box.box2>div.bd>ul.chapter-list.clearfix#chapterList",
+					"item": "li.item",
+					"name": "li.item",
+					"url": "li.item"
+				},
+				"index": {
+					"searchOkBtn": "$s:https://www.ikanm8.com/search?keyword=${value}"
+				},
+				"detail": {
+					"content": "$c:function getimglist(dd) {\n  var imglist = []\n  dd('.comicimg').each((i, img) => {\n    imglist.push(dd(img).attr('src'))\n  })\n  return imglist\n}\n\nvar arr = []\n$('.footpage .selectpage option').each((i, it) => {\n  arr.push(it.value)\n})\narr.shift()\n\nvar imglist = []\nimglist = imglist.concat(getimglist($))\n\n;(function intor(i) {\n  // getData(arr[i])\n  if (i >= arr.length) {\n    setDataList(imglist)\n    return\n  }\n\n  $.ajax({\n    method: 'get',\n    url: '?page' + arr[i],\n    success(res) {\n      imglist = imglist.concat(getimglist(cheerioload(res)))\n      intor(i + 1)\n    },\n  })\n})(0)\n"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1651276665344": {
+			"info": {
+				"id": 1651276665344,
+				"url": "https://manhua.dmzj.com/",
+				"name": "动漫之家",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.dmzj.com/",
+				"search": "https://manhua.dmzj.com/tags/search.shtml?s=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"list": "https://manhua.dmzj.com/yxw5ds",
+				"detail": "https://manhua.dmzj.com/yxw5ds/8663.shtml#@page=1"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>div.topTheme.autoHeight.dmzjtest-class>div.topTheme_inner.autoHeight>div.topTheme_in_search>div.topTheme_in_search_input>div.topTheme_search_input>form>input.search_input_l#searInput",
+					"searchOkBtn": "$s:https://manhua.dmzj.com/tags/search.shtml?s=${value}"
+				},
+				"search": {
+					"list": "html>body>div.wrap>div.leftmiddle>div.leftmiddle_mr>div.tcaricature_new>div.tcaricature_block.tcaricature_block2",
+					"item": "ul",
+					"name": "a",
+					"url": "a"
+				},
+				"list": {
+					"list": "html>body>div.wrap>div.middleright>div.middleright_mr>div.cartoon_online_border",
+					"item": "a",
+					"name": "a",
+					"url": "a"
+				},
+				"detail": {
+					"content": "#center_box img",
+					"total": "$c:$('.btmBtnBox').find('select option').length",
+					"pageRule": "$s:#@page=${pageIndex}。0",
+					"correctMar": 0
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1644716580349": {
+			"info": {
+				"id": 1644716580349,
+				"url": "https://www.kuaikanmanhua.com/",
+				"name": "快看",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.kuaikanmanhua.com/",
+				"search": "https://www.kuaikanmanhua.com/web/topic/7873/",
+				"detail": "https://www.kuaikanmanhua.com/web/comic/380991/",
+				"list": "https://www.kuaikanmanhua.com/web/topic/7873/"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>div#__nuxt>div#__layout>div.bodyContent>div.Home>div.Headers#HomeHeader>div.headerContent>div.navCon.cls>div.SearchBox.cls.homeType.fl",
+					"searchOkBtn": "$s:https://www.kuaikanmanhua.com/sou/${value}"
+				},
+				"detail": {
+					"content": "$c:var arr = [];\n$('html>body>div#__nuxt>div#__layout>div.bodyContent>div.comic>div.contentBox>div.comicDetails>div.imgList').find('.img-box').each((i,it) => {\n    arr.push($(it).find('img').attr('data-src'))\n})\nreturn arr"
+				},
+				"search": {
+					"list": "html>body>div#__nuxt>div#__layout>div.bodyContent>div.searchPage>div.content>div.result>div.resultList.cls",
+					"item": "div.TabW184.fl.padding16",
+					"name": ".itemTitle",
+					"url": "div.TabW184.fl.padding16"
+				},
+				"list": {
+					"list": "html>body>div#__nuxt>div#__layout>div.bodyContent>div.Topic>div.contentBox>div.TopicBox>div.TopicList>div:nth-of-type(2)",
+					"item": "div.TopicItem.cls",
+					"name": "span",
+					"url": "span"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1665989798588": {
+			"info": {
+				"id": 1665989798588,
+				"url": "https://www.biquge7.top/",
+				"name": "笔趣阁7",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"bigType": "book",
+				"visible": true,
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `https://www.biquge7.top/search?keyword=${encodeURIComponent(\n    searchval\n  )}&page=${pageIndex}`\n  return libutil\n    .suagent(url, {\n      data: {\n        // wd: searchval,\n      },\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list($('.fenlei .tui_1_item'), ($li) => {\n        list.push({\nauthor: $li.find('span').text(),\n          name: $li.find('a').attr('title'),\n          id: $li.find('a').attr('href'),\n        })\n      })\n      let pageTotal = 0\n      /* let pageTotal = $('.result-title')\n        .text()\n        .match(/(（.+）)/gi)\n      pageTotal = pageTotal\n        ? Math.ceil(parseInt(pageTotal[0].replace(/（|）/gi, '')) / 12)\n        : 0 */\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text) {\n  const $ = cheerio.load(text)\n  const list = []\n\n  libutil.forEach$list($('.list ul li'), ($li) => {\n    var $item = $li.find('a')\n    let title = $item.text()\n    list.push({\n      url: $item.attr('href'),\n      title,\n    })\n  })\n\n  const obj = {\n    name: $('.detail-info-title').text(),\n    list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex, HOST) {\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('.text')\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      setData('')\n    })\n}"
+			},
+			"downloadTime": 1689870162
+		},
+		"1668242416586": {
+			"info": {
+				"id": 1668242416586,
+				"url": "https://www.97mh.com/",
+				"name": "97漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `https://www.97mh.com/statics/search.aspx?key=${encodeURIComponent(\n    searchval\n  )}&page=${pageIndex}`\n  /* var url = `https://www.bbiquge.net/modules/article/search.php?searchkey=${libutil.getGbkStr(\n    searchval\n  )}&submit=%CB%D1%CB%F7` */\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      data: {\n        // wd: searchval,\n      },\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list($('.mh-list li'), ($li) => {\n        // const $tds = $li.find('td')\n        const $a = $li.find('.mh-item-tip a')\n        list.push({\n          name: $a.attr('title'),\n          id: $a.attr('href'),\n          // author: $tds.eq(2).text(),\n        })\n      })\n      let pageTotal = 0\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1668678031077": {
+			"info": {
+				"id": 1668678031077,
+				"url": "https://www.kuimh.com/",
+				"name": "kui漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `https://www.kuimh.com/search?keyword=${encodeURIComponent(\n    searchval\n  )}&page=${pageIndex}`\n  /* var url = `https://www.bbiquge.net/modules/article/search.php?searchkey=${libutil.getGbkStr(\n    searchval\n  )}&submit=%CB%D1%CB%F7` */\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      data: {\n        // wd: searchval,\n      },\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list($('.mh-list li'), ($li) => {\n        // const $tds = $li.find('td')\n        const $a = $li.find('a')\n        list.push({\n          name: $a.attr('title'),\n          id: $a.attr('href'),\n          // author: $tds.eq(2).text(),\n        })\n      })\n      let pageTotal = 0\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text) {\n  const $ = cheerio.load(text)\n  const list = []\n\n  libutil.forEach$list($('#chapterlistload ul li'), ($li) => {\n    var $items = $li.find('a')\n    var $item = null\n    for (var i = 0; i < $items.length; i++) {\n      var $it = $items.eq(i)\n      var styleTxt = $it.attr('style') || ''\n      if (\n        styleTxt.indexOf('display') !== -1 &&\n        styleTxt.indexOf('none') !== -1\n      ) {\n      } else {\n        $item = $it\n      }\n    }\n    let title = $item.text()\n    list.push({\n      url: $item.attr('href'),\n      title,\n    })\n  })\n\n  const obj = {\n    name: $('.detail-info-title').text(),\n    list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const arr = []\n      libutil.forEach$list($('.comicpage div'), ($li) => {\n        var $items = $li.find('img')\n        var $item = null\n        for (var i = 0; i < $items.length; i++) {\n          var $it = $items.eq(i)\n          var styleTxt = $it.attr('style') || ''\n          if (\n            styleTxt.indexOf('display') !== -1 &&\n            styleTxt.indexOf('none') !== -1\n          ) {\n          } else {\n            $item = $it\n          }\n        }\n        arr.push($item.attr('data-echo') || $item.attr('src'))\n      })\n      //\n\n      // console.log(res)\n      return setData(arr)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1668995024347": {
+			"info": {
+				"id": 1668995024347,
+				"url": "https://www.maofly.com/",
+				"name": "漫画猫",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.maofly.com/",
+				"search": "https://www.maofly.com/search.html?q=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"list": "https://www.maofly.com/manga/11157.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body.top-bg>nav.d-none.d-sm-block.top-bg2.bg-white>div.container-fluid.comic-detail.px-0>div.row.m-0.px-md-2>div.col-8.col-sm-6.col-md-6.col-lg-3.col-xl-3.px-0>form.form-inline>div.input-group.w-100>input.form-control",
+					"searchOkBtn": "html>body.top-bg>nav.d-none.d-sm-block.top-bg2.bg-white>div.container-fluid.comic-detail.px-0>div.row.m-0.px-md-2>div.col-8.col-sm-6.col-md-6.col-lg-3.col-xl-3.px-0>form.form-inline>div.input-group.w-100>span.input-group-btn>button.btn.btn-primary"
+				},
+				"search": {
+					"list": "html>body.top-bg>div.container-fluid.comic-detail.px-0.px-sm-3.pt-sm-3>div.row.m-0>div.col-12.px-0>div.comic-main-section.bg-white.p-3>div.row.m-0",
+					"item": "div.comicbook-index.mb-2.mb-sm-0",
+					"name": "h2.mt-0.mb-1.one-line",
+					"url": "div.comicbook-index.mb-2.mb-sm-0"
+				},
+				"list": {
+					"list": "html>body.top-bg>div.container-fluid.comic-detail.px-0.px-lg-3.px-xl-0>div.row.m-0.mt-lg-3>div.col-lg-8.px-0>div.comic-toc-section.bg-white.p-3>div.tab-content#comic-book-list>div.tab-pane.fade.show.active>ol.links-of-books.num_div:nth-of-type(1)",
+					"item": "a.fixed-a-es",
+					"name": "a.fixed-a-es",
+					"url": "a.fixed-a-es"
+				},
+				"detail": {
+					"content": "$eval:return img_data_arr.map(it => asset_domain + img_pre + it)"
+				}
+			}
+		},
+		"1673334576251": {
+			"info": {
+				"id": 1673334576251,
+				"url": "http://www.kumw6.com",
+				"name": "酷漫屋",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "0",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "http://www.kumw6.com/",
+				"search": "http://www.kumw6.com/search?keyword=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"list": "http://www.kumw6.com/12693/",
+				"detail": "http://www.kumw6.com/12693/1432692.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>header.header>div.container>div.header-search>input.txtKeywords",
+					"searchOkBtn": "$s:http://www.kumw6.com/search?keyword=${value}"
+				},
+				"search": {
+					"list": "html>body>div.view-body>div.sectview>section.box.container",
+					"item": "li.card.r1c3",
+					"name": "a:nth-of-type(1) p.card-text",
+					"url": "p.card-text"
+				},
+				"list": {
+					"list": "$c:var list = []\n$('#chapterlistload ul li').each((i, li) => {\n  var $li = $(li)\n  var $items = $li.find('a')\n  var $item = null\n  for (var i = 0; i < $items.length; i++) {\n    var $it = $items.eq(i)\n    var styleTxt = $it.attr('style') || ''\n    if (\n      styleTxt.indexOf('display') !== -1 &&\n      styleTxt.indexOf('none') !== -1\n    ) {\n    } else {\n      $item = $it\n    }\n  }\n  let title = $item.text()\n  list.push({\n    url: $item.attr('href'),\n    title,\n  })\n})\n\n$.ajax({\n  method: 'get',\n  url: window.location.origin +'/chapterlist' + window.location.pathname,\n  success (res) {\n    // console.log(res.data.list)\n    res=JSON.parse(res)\n    const list2 = res.data.list.map((it) => ({\n      title: it.name,\n      url: window.location.pathname + it.id + '.html',\n    }))\n    var list3 = list.concat(list2)\n    setDataList(list3)\n  }\n})"
+				},
+				"detail": {
+					"content": "$c:var list = []\n$('.chapter-img-box').each((i, li) => {\n  var $img = $(li).find('img')\n\n  list.push($img.attr('data-src') || $img.attr('src'))\n})\n\nreturn list\n"
+				}
+			},
+			"downloadTime": 1689870162
+		},
+		"1674031946194": {
+			"info": {
+				"id": 1674031946194,
+				"url": "https://www.copymanga.site/",
+				"name": "拷贝漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "0",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.copymanga.site/",
+				"search": "https://www.copymanga.site/search?q=%E6%B8%B8%E6%88%8F%E7%8E%8B&q_type=",
+				"list": "https://www.copymanga.site/comic/wangyouxi",
+				"detail": "https://www.copymanga.site/comic/wangyouxi/chapter/65616bfa-22d0-11ed-a4eb-024352452ce0"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>header>div.container.header-log>div.row>div.col-3>div.row.align-items-center.header-input>div.col-12>div.header-input-input>div>input",
+					"searchOkBtn": "$s:https://www.copymanga.site/search?q=${value}&q_type="
+				},
+				"search": {
+					"list": "html>body>main.content-box>div.container.searchResult-all>div.tab-content>div.tab-pane.fade.show.active#comic>div.row",
+					"item": "div.col-auto.exemptComic_Item",
+					"name": "p.twoLines",
+					"url": "div.col-auto.exemptComic_Item"
+				},
+				"list": {
+					"list": "html>body>main.content-box>div.container.comicParticulars-synopsis>div.upLoop>div.table-default>div.table-default-box>div.tab-content>div.tab-pane.fade.show.active#default全部>ul:nth-of-type(1)",
+					"item": "li",
+					"name": "li",
+					"url": "li"
+				},
+				"detail": {
+					"content": "$c:var count = $('.comicCount').text()\ncount = parseInt(count) || 0\nvar $ctn = $('.comicContent-list')\nfor (let i = 0; i < count; i++) {\n\tlet evt = document.createEvent('UIEvents')\n\tevt.initUIEvent('scroll', true, true, window, 1, 12,345,7,220,false,false,true,false,0,null)\n\t$ctn[0].dispatchEvent(evt)\n\t\n}\nvar arr = []\n$ctn.find('li').each((i, li) => {\n  var $img= $(li).find('img')\n  arr.push($img.attr('data-src'))\n})\nreturn arr"
+				}
+			}
+		},
+		"1675823012006": {
+			"info": {
+				"id": 1675823012006,
+				"url": "http://www.manben.com/",
+				"name": "漫本",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    `/search?title=${encodeURIComponent(\n      searchval\n    )}&language=1&page=${pageIndex}`,\n    HOST\n  )\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.bookList_2 .item'),\n        ($li) => {\n          const $a = $li.find('.title a')\n          return {\n            id: $a.attr('href'),\n            name: $li.find('.title').text(),\n            cover: $li.find('.cover').attr('src'),\n          }\n        },\n        'id'\n      )\n      const $li = $('.pager a')\n      let pageTotal = parseInt(\n        $li\n          .eq($li.length - 2)\n          .text()\n          .trim()\n      )\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}\n",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = libutil.getListBy$List($('#chapterlistload a'), ($a) => {\n    if ($a.length === 0) {\n      return\n    }\n    const title = $a.attr('title') || $a.text()\n    return {\n      url: $a.attr('href'),\n      title,\n    }\n  })\n  setData({\n    list,\n  })\n}",
+				"picListStr": "function getpicListImg(urlpath, item) {\n  const that = this\n  let { maxPageCount } = item\n  // https://www.cartoonmad.com/comic/282500952021001.html\n  // 解析这个，后3位是动态的282500952021001\n\n  that.getOnlineMap = function () {\n    return {\n      Referer: urlpath,\n    }\n  }\n  // console.log('urlpath', urlpath)\n  libutil.suagent(urlpath).then(({ text }) => {\n    const $ = cheerio.load(text)\n    let evaltxt = ''\n    libutil.forEach$list($('script'), ($li) => {\n      var html = $li.html()\n      if (html.indexOf('eval') !== -1 && html.indexOf('newImgs') !== -1) {\n        evaltxt = html\n        return false\n      }\n      // list.push($li.find('img').attr('data-src'))\n    })\n    var newImgs = []\n    eval(evaltxt)\n\n    setData(newImgs)\n  })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161,
+			"key": 1675823012006
+		},
+		"1675755078577": {
+			"info": {
+				"id": 1675755078577,
+				"url": "https://www.cartoonmad.com/",
+				"name": "漫画狂",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "1",
+				"gbkType": "big5",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/search.html`, HOST)\n  console.log(url)\n  // return\n  return libutil\n    .suagent('post', url, {\n      isgbk: true,\n      gbkType: 'big5',\n      data: {\n        keyword: libutil.traditionalized(searchval),\n        searchtype: 'all',\n      },\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.covertxt'),\n        ($li) => {\n          const $a = $li.siblings('a')\n          console.log('aa')\n          return {\n            id: $a.attr('href'),\n            name: $a.attr('title') || $a.text(),\n          }\n        },\n        'id'\n      )\n      let pageTotal = 0\n\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = libutil.getListBy$List(\n    $('#info table:nth-of-type(1)').eq(1).find('tr td'),\n    ($li) => {\n      const $a = $li.find('a')\n      if ($a.length === 0) {\n        return\n      }\n      const title = $a.attr('title') || $a.text()\n      const $span = $li.find('font')\n      return {\n        url: $a.attr('href'),\n        title,\n        maxPageCount: parseInt($span.text().replace(/\\(|\\)/gi, '')),\n      }\n    }\n  )\n  setData({\n    list,\n  })\n}",
+				"picListStr": "function getpicListImg(urlpath, item) {\n  const that = this\n  let { maxPageCount } = item\n  // https://www.cartoonmad.com/comic/282500952021001.html\n  // 解析这个，后3位是动态的282500952021001\n\n  that.getOnlineMap = function () {\n    return {\n      Referer: urlpath,\n    }\n  }\n  libutil.suagent(urlpath).then(({ text }) => {\n    const $ = cheerio.load(text)\n    let src = ''\n    libutil.forEach$list($('tr table tr a img'), ($li) => {\n      if ($li.attr('onload')) {\n        src = $li.attr('src')\n        return false\n      }\n    })\n    const list = []\n\n    const $page = $('.pages')\n    maxPageCount = parseInt($page.eq($page.length - 2).text()) || maxPageCount\n    let urlid = libutil.getIdByLastItem(src)\n    urlid = urlid.slice(0, urlid.length - 3)\n    for (let i = 1; i <= maxPageCount; i++) {\n      let urlidstr = urlid + libutil.addZero(i, 2)\n      const arr = src.split('/')\n      arr[arr.length - 1] = urlidstr\n      const mrul1 = arr.join('/')\n      list.push(mrul1)\n    }\n\n    setData(list)\n  })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675747935500": {
+			"info": {
+				"id": 1675747935500,
+				"url": "http://www.dongmanhi.com/",
+				"name": "动漫嗨",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    `/search?title=${encodeURIComponent(searchval)}&page=${pageIndex}`,\n    HOST\n  )\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.mh-list li'),\n        ($li) => {\n          const $a = $li.find('.title a')\n          return {\n            id: $a.attr('href'),\n            name: $a.attr('title') || $a.text(),\n            cover: $li.find('.mh-cover').attr('src'),\n          }\n        },\n        'id'\n      )\n      const $li = $('.page-pagination ul li')\n      let pageTotal =\n        libutil.getPageIndexByaHref(\n          $li\n            .eq($li.length - 1)\n            .find('a')\n            .attr('href')\n        ) || 0\n\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List(\n    $('#chapterlistload ul').eq(0).find('li'),\n    ($li) => {\n      const $a = $li.find('a')\n      const title = $a.attr('title') || $a.text()\n      return {\n        url: $a.attr('href'),\n        title,\n      }\n    }\n  )\n  setData({\n    list,\n  })\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      // needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list($('.readForm img'), ($li) => {\n        list.push($li.attr('data-original'))\n      })\n      setData(list)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675653091202": {
+			"info": {
+				"id": 1675653091202,
+				"url": "https://www.1kkk.com/",
+				"name": "1k漫画(同DM5)",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    `/search?title=${encodeURIComponent(\n      searchval\n    )}&language=1&page=${pageIndex}`,\n    HOST\n  )\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.mh-list li'),\n        ($li) => {\n          const $a = $li.find('.title a')\n          return {\n            id: $a.attr('href'),\n            name: $a.attr('title') || $a.text(),\n            cover: libutil.getBackgroundImage(\n              $li.find('.mh-cover').attr('style')\n            ),\n          }\n        },\n        'id'\n      )\n      const $li = $('.page-pagination ul li')\n      let pageTotal =\n        parseInt(\n          $li\n            .eq($li.length - 2)\n            .find('a')\n            .text()\n            .trim()\n        )\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List(\n    $('#chapterlistload ul').eq(0).find('li'),\n    ($li) => {\n      const $a = $li.find('a')\n      const title = $a.attr('title') || $a.text()\n      return {\n        url: $a.attr('href'),\n        title,\n        maxPageCount: (((title.match(/（.+）/gi) || [])[0] || '').match(\n          /\\d+/\n        ) || [])[0],\n      }\n    }\n  )\n  setData({\n    list,\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "function getOnepicImg(urlpath, item, pageIndex, mgIndex, HOST) {\n  const that = this\n  const { url, maxPageCount, title } = item\n\n  const murl =\n    libutil.getUrlById(url, HOST) + (mgIndex === 1 ? '' : '#ipg' + mgIndex)\n  that.getOnlineMap = function () {\n    return {\n      Referer: murl,\n    }\n  }\n\n  function getParams(url) {\n    return new Promise((resolve, reject) => {\n      var mm = url.split('?')[0]\n      var re = /m\\d+-p(\\d+)\\/?/\n      var mat = mm.match(re) || [0, 1]\n      console.log('开始获取图片所需要的参数', url)\n      // console.log(url)\n\n      libutil\n        .suagent(url)\n        .then(({ text }) => {\n          console.log('图片所需要的参数获取成功')\n          const $ = cheerio.load(text)\n          const $ss = $('head').find('script')\n          let phtml = ''\n          libutil.forEach$list($ss, ($s) => {\n            var html = $s.html()\n            if (html.indexOf('var DM5_CID') != -1) {\n              phtml = html\n              return\n            }\n          })\n          phtml = phtml.replace(\n            'reseturl(window.location.href, DM5_CURL.substring(0, DM5_CURL.length - 1))',\n            ''\n          )\n          const params = libutil.execParams(phtml)\n          // console.log('params是什么？', phtml, params)\n          params.MANGABZ_PAGE = parseInt(mat[1])\n          resolve(params)\n        })\n        .catch(reject)\n    })\n  }\n\n  function getImgurl(url, params) {\n    // console.log(params)\n    return new Promise((resolve, reject) => {\n      // var url =\n      const prs = {\n        cid: params.DM5_CID,\n        page: mgIndex,\n        key: '',\n        gtk: 6,\n        language: 1,\n        _cid: params.DM5_CID,\n        _mid: params.DM5_MID,\n        _dt: params.DM5_VIEWSIGN_DT.split(' ').join(' '),\n        _sign: params.DM5_VIEWSIGN,\n      }\n\n      // selfmkdir(`${dirpath}/${params.MANGABZ_CURL.replace(/\\//ig, '')}`)\n      console.log('开始获取图片地址', url, prs)\n\n      libutil\n        .suagent(url + 'chapterfun.ashx?' + libutil.trans(prs), {\n          setMap: {\n            Referer: url,\n          },\n        })\n        .then(function ({ text }) {\n          console.log('获取', text)\n          eval(text)\n          if (!text) {\n            reject('error')\n            console.log('获取图片地址失败！')\n            return\n          }\n          console.log('图片地址如下：')\n          console.log(d[0])\n          resolve(d[0])\n        })\n        .catch((err) => {\n          console.log('err', err)\n          reject(err)\n        })\n      // .query(prs)\n      // .set('Cookie', cookie)\n      // .set('User-Agent', ' Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Aoyou/UWw7YQlYOVZ9M3haXXN2OLgCJxZ_UrUY8V3G22OqBgD13uvfV4p6DDBNbA==')\n    })\n  }\n\n  getParams(murl)\n    .then((params) => {\n      getImgurl(libutil.getUrlById(url, HOST), params)\n        .then((res) => {\n          setData(res)\n        })\n        .catch((err) => {\n          console.log('err', err)\n          setData('')\n        })\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675301077185": {
+			"info": {
+				"id": 1675301077185,
+				"url": "https://www.manmanapp.com/",
+				"name": "漫漫漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    `/search/word-${\n      encodeURIComponent(searchval) + (pageIndex === 1 ? '' : '_' + pageIndex)\n    }.html`,\n    HOST\n  )\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.mainBody .classification'),\n        ($li) => {\n          const $a = $li.find('a').eq(0)\n          return {\n            id: $a.attr('href'),\n            name: $li.find('.title').text(),\n            cover: $a.find('img').attr('src'),\n          }\n        },\n        'id'\n      )\n      const $li = $('.paging li')\n      let pageTotal =\n        parseInt(\n          $li\n            .eq($li.length - 2)\n            .find('a')\n            .text()\n            .trim()\n        ) * 10\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  // console.log(this.id)\n  const comicId = parseFloat(libutil.getUrlById(this.id, host).split('-')[1])\n  // console.log(comicId)\n  var list = []\n  libutil.execFnloop((next, count) => {\n    libutil\n      .suagent('post', 'https://www.manmanapp.com/works/comic-list-ajax.html', {\n        data: {\n          id: comicId,\n          sort: 0,\n          page: count,\n        },\n        setMap: {\n          referer: this.getListUrl,\n          'x-requested-with': 'XMLHttpRequest',\n          'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',\n        },\n      })\n      .then((res) => {\n        var data = libutil.jsonParse(res.text)\n        // console.log('data', data)\n        if (data) {\n          if (data.data) {\n            var relist = data.data.map((it) => ({\n              url: libutil.addHost(`/comic/detail-${it.id}.html`, host),\n              title: it.title,\n            }))\n            list = list.concat(relist)\n            next()\n          } else {\n            const obj = {\n              list: list,\n            }\n\n            setData(obj)\n          }\n        } else {\n          const obj = {\n            list: list,\n          }\n\n          setData(obj)\n        }\n      })\n  })\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      // needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list($('.cartoon img'), ($li) => {\n        list.push($li.attr('src'))\n      })\n      setData(list)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675235480732": {
+			"info": {
+				"id": 1675235480732,
+				"url": "https://www.dongmanmanhua.cn/",
+				"name": "咚漫漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/search/autoComplete`, HOST)\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      data: {\n        keyword: searchval,\n      },\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      console.log('text', text)\n      var json = JSON.parse(text)\n      const list = json.items[0].map((it) => ({\n        id: '/episodeList?titleNo=' + it[3],\n        name: it[0][0],\n      }))\n\n      let pageTotal = 0\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, HOST) {\n  const $ = cheerio.load(text)\n  let list = []\n  libutil.forEach$list($('#_listUl li'), ($li) => {\n    var $a = $li.find('a')\n    let title = $a.find('.subj').text()\n    list.push({\n      url: libutil.addHttp($a.attr('href'), 'https:'),\n      title,\n    })\n  })\n\n  const obj = {\n    // name: $('.info h1').text(),\n    list: list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      // needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list($('#_imageList img'), ($li) => {\n        list.push($li.attr('data-url'))\n      })\n      setData(list)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675232752173": {
+			"info": {
+				"id": 1675232752173,
+				"url": "https://www.kanman.com/",
+				"name": "看漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/sort/#${encodeURIComponent(searchval)}`, HOST)\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      setMap: {\n        Connection: 'keep-alive',\n        Referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      // 获取vendor里的漫画信息\n      var scripturl = libutil.getTextBy$node($('script'), 'src', 'vendor')\n\n      if (scripturl) {\n        scripturl = libutil.addHttp(scripturl, 'https:')\n        console.log('ttt', scripturl)\n        // libutil\n\n        libutil\n          .suagent(scripturl, {\n            setMap: {\n              Connection: 'keep-alive',\n              Referer: HOST,\n            },\n          })\n          .then(({ text }) => {\n            var window = {}\n            var lastkh = text.indexOf('};')\n            text = text.slice(0, lastkh + 1)\n            // console.log('ttttxt', text)\n            eval(text)\n            // console.log(window.siteConf)\n            var apiurl = libutil.addHost('/api/getsortlist/', HOST)\n            // 获取到信息后\n            console.log('apiurl', apiurl)\n            libutil\n              .suagent(apiurl, {\n                // isgbk: true,\n                data: {\n                  product_id: window.siteConf.product_id,\n                  productname: window.siteConf.productname,\n                  platformname: 'pc',\n                  search_key: searchval,\n                },\n                setMap: {\n                  Connection: 'keep-alive',\n                  // 'Upgrade-Insecure-Requests': 1,\n                  Referer: HOST,\n                },\n                // disableTLSCerts: true,\n              })\n              .then(({ text }) => {\n                console.log('text', text)\n                var json = JSON.parse(text)\n                const list = json.data.map((it) => ({\ncover: it.cover_img,\n                  id: '/' + it.comic_id,\n                  name: it.comic_name,\n                }))\n\n                let pageTotal = 0\n                // let pageTotal = parseInt($('.pagelink .last').text())\n                setData({\n                  list,\n                  pageTotal,\n                })\n              })\n          })\n      } else {\n        setData({\n          list: [],\n          pageTotal: 0,\n        })\n      }\n    })\n}",
+				"chapterStr": "function execList(text, HOST) {\n  const $ = cheerio.load(text)\n  let list = []\n  libutil.forEach$list($('#j_chapter_list li'), ($li) => {\n    var $a = $li.find('a')\n    let title = $a.attr('title')\n    list.push({\n      url: $a.attr('href'),\n      title,\n    })\n  })\n\n  const obj = {\n    // name: $('.info h1').text(),\n    list: list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      let phtml = ''\n      forEach$list($('script'), ($sc) => {\n        let html = $sc.html()\n        if (html.indexOf('window.comicInfo') !== -1) {\n          phtml = html\n          return\n        }\n      })\n      // console.log('phtml', phtml)\n      var window = {}\n      var location = {\n        href: '',\n      }\n      var localStorage = {\n        getItem() {},\n        setItem() {},\n        removeItem() {},\n      }\n      eval(phtml)\n      var apiurl = libutil.addHost('/api/getchapterinfov2', this.host)\n      console.log('apiurl', apiurl)\n      libutil\n        .suagent(apiurl, {\n          data: {\n            chapter_newid: window.comicInfo.current_chapter.chapter_newid,\n            comic_id: window.comicInfo.comic_id,\n            isWebp: 1,\n            quality: 'middle',\n          },\n        })\n        .then(({ text }) => {\n          console.log('text', text)\n          var data = JSON.parse(text)\n          setData(data.data.current_chapter.chapter_img_list)\n        })\n\n      // return setData(window.comicInfo.current_chapter.chapter_newid)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675232493765": {
+			"info": {
+				"id": 1675232493765,
+				"url": "https://www.taomanhua.com/",
+				"name": "神漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/sort/#${encodeURIComponent(searchval)}`, HOST)\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      setMap: {\n        Connection: 'keep-alive',\n        Referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      // 获取vendor里的漫画信息\n      var scripturl = libutil.getTextBy$node($('script'), 'src', 'vendor')\n\n      if (scripturl) {\n        scripturl = libutil.addHttp(scripturl, 'https:')\n        console.log('ttt', scripturl)\n        // libutil\n\n        libutil\n          .suagent(scripturl, {\n            setMap: {\n              Connection: 'keep-alive',\n              Referer: HOST,\n            },\n          })\n          .then(({ text }) => {\n            var window = {}\n            var lastkh = text.indexOf('};')\n            text = text.slice(0, lastkh + 1)\n            // console.log('ttttxt', text)\n            eval(text)\n            // console.log(window.siteConf)\n            var apiurl = libutil.addHost('/api/getsortlist/', HOST)\n            // 获取到信息后\n            console.log('apiurl', apiurl)\n            libutil\n              .suagent(apiurl, {\n                // isgbk: true,\n                data: {\n                  product_id: window.siteConf.product_id,\n                  productname: window.siteConf.productname,\n                  platformname: 'pc',\n                  search_key: searchval,\n                },\n                setMap: {\n                  Connection: 'keep-alive',\n                  // 'Upgrade-Insecure-Requests': 1,\n                  Referer: HOST,\n                },\n                // disableTLSCerts: true,\n              })\n              .then(({ text }) => {\n                console.log('text', text)\n                var json = JSON.parse(text)\n                const list = json.data.map((it) => ({\ncover: it.cover_img,\n                  id: '/' + it.comic_newid,\n                  name: it.comic_name,\n                }))\n\n                let pageTotal = 0\n                // let pageTotal = parseInt($('.pagelink .last').text())\n                setData({\n                  list,\n                  pageTotal,\n                })\n              })\n          })\n      } else {\n        setData({\n          list: [],\n          pageTotal: 0,\n        })\n      }\n    })\n}",
+				"chapterStr": "function execList(text, HOST) {\n  const $ = cheerio.load(text)\n  let list = []\n  libutil.forEach$list($('#j_chapter_list li'), ($li) => {\n    var $a = $li.find('a')\n    let title = $a.attr('title')\n    list.push({\n      url: $a.attr('href'),\n      title,\n    })\n  })\n\n  const obj = {\n    // name: $('.info h1').text(),\n    list: list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      let phtml = ''\n      forEach$list($('script'), ($sc) => {\n        let html = $sc.html()\n        if (html.indexOf('window.comicInfo') !== -1) {\n          phtml = html\n          return\n        }\n      })\n      // console.log('phtml', phtml)\n      var window = {}\n      var location = {\n        href: '',\n      }\n      var localStorage = {\n        getItem() {},\n        setItem() {},\n        removeItem() {},\n      }\n      eval(phtml)\n      var apiurl = libutil.addHost('/api/getchapterinfov2', this.host)\n      console.log('apiurl', apiurl)\n      libutil\n        .suagent(apiurl, {\n          data: {\n            chapter_newid: window.comicInfo.current_chapter.chapter_newid,\n            comic_id: window.comicInfo.comic_id,\n            isWebp: 1,\n            quality: 'middle',\n          },\n        })\n        .then(({ text }) => {\n          console.log('text', text)\n          var data = JSON.parse(text)\n          setData(data.data.current_chapter.chapter_img_list)\n        })\n\n      // return setData(window.comicInfo.current_chapter.chapter_newid)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675152523990": {
+			"info": {
+				"id": 1675152523990,
+				"url": "https://www.iyouman.com/",
+				"name": "爱优漫",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/sort/#${encodeURIComponent(searchval)}`, HOST)\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      setMap: {\n        Connection: 'keep-alive',\n        Referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      // 获取vendor里的漫画信息\n      var scripturl = libutil.getTextBy$node($('script'), 'src', 'vendor')\n\n      if (scripturl) {\n        scripturl = libutil.addHttp(scripturl, 'https:')\n        console.log('ttt', scripturl)\n        // libutil\n\n        libutil\n          .suagent(scripturl, {\n            setMap: {\n              Connection: 'keep-alive',\n              Referer: HOST,\n            },\n          })\n          .then(({ text }) => {\n            var window = {}\n            var lastkh = text.indexOf('};')\n            text = text.slice(0, lastkh + 1)\n            // console.log('ttttxt', text)\n            eval(text)\n            // console.log(window.siteConf)\n            var apiurl = libutil.addHost('/api/getsortlist/', HOST)\n            // 获取到信息后\n            console.log('apiurl', apiurl)\n            libutil\n              .suagent(apiurl, {\n                // isgbk: true,\n                data: {\n                  product_id: window.siteConf.product_id,\n                  productname: window.siteConf.productname,\n                  platformname: 'pc',\n                  search_key: searchval,\n                },\n                setMap: {\n                  Connection: 'keep-alive',\n                  // 'Upgrade-Insecure-Requests': 1,\n                  Referer: HOST,\n                },\n                // disableTLSCerts: true,\n              })\n              .then(({ text }) => {\n                console.log('text', text)\n                var json = JSON.parse(text)\n                const list = json.data.map((it) => ({\ncover: it.cover_img,\n                  id: '/' + it.comic_id,\n                  name: it.comic_name,\n                }))\n\n                let pageTotal = 0\n                // let pageTotal = parseInt($('.pagelink .last').text())\n                setData({\n                  list,\n                  pageTotal,\n                })\n              })\n          })\n      } else {\n        setData({\n          list: [],\n          pageTotal: 0,\n        })\n      }\n    })\n}",
+				"chapterStr": "function execList(text, HOST) {\n  const $ = cheerio.load(text)\n  let list = []\n  libutil.forEach$list($('#j_chapter_list li'), ($li) => {\n    var $a = $li.find('a')\n    let title = $a.attr('title')\n    list.push({\n      url: $a.attr('href'),\n      title,\n    })\n  })\n\n  const obj = {\n    // name: $('.info h1').text(),\n    list: list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      let phtml = ''\n      forEach$list($('script'), ($sc) => {\n        let html = $sc.html()\n        if (html.indexOf('window.comicInfo') !== -1) {\n          phtml = html\n          return\n        }\n      })\n      // console.log('phtml', phtml)\n      var window = {}\n      var location = {\n        href: '',\n      }\n      var localStorage = {\n        getItem() {},\n        setItem() {},\n        removeItem() {},\n      }\n      eval(phtml)\n      var apiurl = libutil.addHost('/api/getchapterinfov2', this.host)\n      console.log('apiurl', apiurl)\n      libutil\n        .suagent(apiurl, {\n          data: {\n            chapter_newid: window.comicInfo.current_chapter.chapter_newid,\n            comic_id: window.comicInfo.comic_id,\n            isWebp: 1,\n            quality: 'middle',\n          },\n        })\n        .then(({ text }) => {\n          console.log('text', text)\n          var data = JSON.parse(text)\n          setData(data.data.current_chapter.chapter_img_list)\n        })\n\n      // return setData(window.comicInfo.current_chapter.chapter_newid)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1675132568828": {
+			"info": {
+				"id": 1675132568828,
+				"url": "https://www.manhuatai.com/",
+				"name": "漫画台",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.manhuatai.com/",
+				"search": "https://www.manhuatai.com/sort/#%E7%B3%BB%E7%BB%9F",
+				"list": "https://www.manhuatai.com/xitongbiwozuohuanghou/"
+			},
+			"grap": {
+				"search": {
+					"list": "html>body>div.acgn-container>div.acgn-row>div.acgn-col-24>div.acgn-tabs.acgn-sort-content>div.acgn-bd.acgn-mb24",
+					"item": "li.acgn-item",
+					"name": "h3.acgn-title",
+					"url": "li.acgn-item"
+				},
+				"index": {
+					"searchOkBtn": "$s:https://www.manhuatai.com/sort/#${value}"
+				},
+				"list": {
+					"list": "#j_chapter_list",
+					"item": "li",
+					"name": ".name",
+					"url": "a"
+				},
+				"detail": {
+					"content": "$c:setTimeout(() => {\n\tsetDataList(window.comicInfo.current_chapter.chapter_img_list)\n}, 4000)"
+				}
+			},
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/sort/#${encodeURIComponent(searchval)}`, HOST)\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      setMap: {\n        Connection: 'keep-alive',\n        Referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      // 获取vendor里的漫画信息\n      var scripturl = libutil.getTextBy$node($('script'), 'src', 'vendor')\n\n      if (scripturl) {\n        scripturl = libutil.addHttp(scripturl, 'https:')\n        console.log('ttt', scripturl)\n        // libutil\n\n        libutil\n          .suagent(scripturl, {\n            setMap: {\n              Connection: 'keep-alive',\n              Referer: HOST,\n            },\n          })\n          .then(({ text }) => {\n            var window = {}\n            var lastkh = text.indexOf('};')\n            text = text.slice(0, lastkh + 1)\n            // console.log('ttttxt', text)\n            eval(text)\n            // console.log(window.siteConf)\n            var apiurl = libutil.addHost('/api/getsortlist/', HOST)\n            // 获取到信息后\n            console.log('apiurl', apiurl)\n            libutil\n              .suagent(apiurl, {\n                // isgbk: true,\n                data: {\n                  product_id: window.siteConf.product_id,\n                  productname: window.siteConf.productname,\n                  platformname: 'pc',\n                  search_key: searchval,\n                },\n                setMap: {\n                  Connection: 'keep-alive',\n                  // 'Upgrade-Insecure-Requests': 1,\n                  Referer: HOST,\n                },\n                // disableTLSCerts: true,\n              })\n              .then(({ text }) => {\n                console.log('text', text)\n                var json = JSON.parse(text)\n                const list = json.data.map((it) => ({\ncover: it.cover_img,\n                  id: '/' + it.comic_newid,\n                  name: it.comic_name,\n                }))\n\n                let pageTotal = 0\n                // let pageTotal = parseInt($('.pagelink .last').text())\n                setData({\n                  list,\n                  pageTotal,\n                })\n              })\n          })\n      } else {\n        setData({\n          list: [],\n          pageTotal: 0,\n        })\n      }\n    })\n}",
+				"chapterStr": "function execList(text, HOST) {\nconsole.log('f1')\n  const $ = cheerio.load(text)\nconsole.log('f2')\n  let list = []\n  libutil.forEach$list($('#j_chapter_list li'), ($li) => {\n    var $a = $li.find('a')\n    let title = $a.attr('title')\n    list.push({\n      url: $a.attr('href'),\n      title,\n    })\n  })\n\n  const obj = {\n    // name: $('.info h1').text(),\n    list: list,\n  }\n\n  setData(obj)\n}",
+				"picListStr": "function getpicListImg(urlpath) {\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      let phtml = ''\n      forEach$list($('script'), ($sc) => {\n        let html = $sc.html()\n        if (html.indexOf('window.comicInfo') !== -1) {\n          phtml = html\n          return\n        }\n      })\n      // console.log('phtml', phtml)\n      var window = {}\n      var location = {\n        href: '',\n      }\n      var localStorage = {\n        getItem() {},\n        setItem() {},\n        removeItem() {},\n      }\n      eval(phtml)\n      var apiurl = libutil.addHost('/api/getchapterinfov2', this.host)\n      console.log('apiurl', apiurl)\n      libutil\n        .suagent(apiurl, {\n          data: {\n            chapter_newid: window.comicInfo.current_chapter.chapter_newid,\n            comic_id: window.comicInfo.comic_id,\n            isWebp: 1,\n            quality: 'middle',\n          },\n        })\n        .then(({ text }) => {\n          console.log('text', text)\n          var data = JSON.parse(text)\n          setData(data.data.current_chapter.chapter_img_list)\n        })\n\n      // return setData(window.comicInfo.current_chapter.chapter_newid)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1677033082695": {
+			"info": {
+				"id": 1677033082695,
+				"url": "https://www.rrets.cc/",
+				"name": "人人影视",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(`/so/?wd=${encodeURIComponent(searchval)}`, HOST)\n  // console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.module-page .module-item'),\n        ($li) => {\n          const $a = $li.find('a.module-card-item-poster')\n          return {\n            id: $a.attr('href'),\n            name: $li\n              .find('.module-card-item-info .module-card-item-title')\n              .text(),\n            cover: $a.find('img').attr('data-original'),\n          }\n        },\n        'id'\n      )\n      let pageTotal = 0\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = libutil.getListBy$List(\n    $('.module-play-list a.module-play-list-link'),\n    ($a) => {\n      if ($a.length === 0) {\n        return\n      }\n      const title = $a.text()\n      return {\n        url: $a.attr('href'),\n        title,\n      }\n    }\n  )\n  setData({\n    list: [\n      {\n        name: '线路1',\n        // name: escapeSpecChart($it.find('h2').text()),\n        unclearTotal: true,\n        arr: list,\n      }\n    ],\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1677036074387": {
+			"info": {
+				"id": 1677036074387,
+				"url": "https://www.freeok.vip/",
+				"name": "freeok影视",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    `/vodsearch/-------------.html?wd=${encodeURIComponent(searchval)}`,\n    HOST\n  )\n  // console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.module-page .module-item'),\n        ($li) => {\n          const $a = $li.find('a.module-card-item-poster')\n          return {\n            id: $a.attr('href'),\n            name: $li\n              .find('.module-card-item-info .module-card-item-title')\n              .text(),\n            cover: $a.find('img').attr('data-original'),\n          }\n        },\n        'id'\n      )\n      let pageTotal = 0\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = []\n  const $listjqArr = $('.module-list')\n  libutil.forEach$list($('.module-tab-items-box .tab-item'), ($item, idx) => {\n    list.push({\n      name: $item.attr('data-dropdown-value'),\n      // name: escapeSpecChart($it.find('h2').text()),\n      unclearTotal: true,\n      arr: libutil.getListBy$List(\n        $listjqArr.eq(idx).find('.module-play-list .module-play-list-link'),\n        ($a) => {\n          if ($a.length === 0) {\n            return\n          }\n          const title = $a.text()\n          return {\n            url: $a.attr('href'),\n            title,\n          }\n        },\n        'url'\n      ),\n    })\n  })\n  setData({\n    list,\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1678083436274": {
+			"info": {
+				"id": 1678083436274,
+				"url": "http://www.wwwbxwx.com/",
+				"name": "www笔下文学",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "1",
+				"gbkType": "",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(search, pageIndex = 1, HOST) {\n  // search = encodeURIComponent(search)\n  // /search.html?searchkey=游戏王\n  const url = `${HOST}modules/article/search.php?submit=${libutil.getGbkStr(\n    '搜索'\n  )}\n    &searchkey=${libutil.getGbkStr(search)}&page=${pageIndex}`\n  console.log(url)\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n      isgbk: true,\n    })\n    .then(({ text }) => {\n      // return;\n      // console.log(text)\n      const $ = cheerio.load(text)\n      // const total = ($('.yemian').find('.pageinfo').find('strong').eq(1).text())\n      const $lis = $('table tbody tr')\n      const list = []\n      for (let i = 1, len = $lis.length; i < len; i++) {\n        const $item = $lis.eq(i)\n        const $a = $item.find('td').eq(0).find('a')\n        let author = $item.find('td').eq(2).text()\n        let name = $a.text()\n        let id = $a.attr('href')\n        // console.log(id)\n        list.push({\n          id,\n          author,\n          name,\n        })\n      }\n\n      setData({\n        list,\n      })\n    })\n    .catch((e) => {\n      console.log('e', e)\n    })\n}",
+				"chapterStr": "function execList(text, res, HOST) {\n  function getList(text1) {\n    const $ = cheerio.load(text1)\n\n    const list = libutil.getListBy$List(\n      $('.chapterlist').eq(1).find('li'),\n      ($li) => {\n        const $a = $li.find('a')\n        const title = $a.attr('title') || $a.text()\n        return {\n          url: $a.attr('href'),\n          title,\n        }\n      }\n    )\n    return list\n  }\n  const $ = cheerio.load(text)\n  let list = []\n  list = list.concat(getList(text))\n  const urllist = []\n  libutil.forEach$list($('.form-control option'), ($opt, i) => {\n    if (i === 0) {\n      return\n    }\n    var url = libutil.addHost($opt.attr('value'), HOST)\n    urllist.push(url)\n  })\n  libutil.execFnloop((next, icount) => {\n    if (icount > urllist.length) {\n      setData({\n        list,\n      })\n      return\n    }\n    const url = urllist[icount - 1]\n    console.log('url', url)\n\n    libutil\n      .suagent(url, {\n        setMap: {\n          referer: HOST,\n        },\n        isgbk: true,\n      })\n      .then(({ text }) => {\n        list = list.concat(getList(text))\n      })\n      .catch((e) => {\n        console.log('e', e)\n      })\n      .finally(() => {\n        next()\n      })\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex, HOST) {\n  const item = this.getAllListItem(pageIndex)\n  let { url: urlAsId } = item\n  urlAsId = libutil.deTransUrlIdAll(urlAsId)\n  console.log('urlAsId',urlAsId)\n  const ar = urlAsId.split('/')\n  const url = this.getListUrl  +'/'+ ar[ar.length -1]\n  console.log('url', url)\n\n  libutil\n    .suagent(url, {\n      isgbk: true,\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#htmlContent')\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      setData('')\n    })\n}",
+				"getVideoAddress": "",
+				"initcbStr": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1680232788520": {
+			"info": {
+				"id": 1680232788520,
+				"url": "https://www.mangabz.com/",
+				"name": "mangabz可随时更新版",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var atr = '&page=' + pageIndex\n  atr = pageIndex <= 1 ? '' : atr\n  // const domain = 'mangabz.com'\n  const bzPageSize = 12\n  var url = HOST + 'search/?title=' + encodeURIComponent(searchval) + atr\n\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.mh-list').find('li'),\n        ($item) => {\n          return {\n            bgType: 'ne0s',\n            id: $item.find('.title a').attr('href'),\n            name: $item.find('.title').text(),\n            cover: $item.find('.mh-cover').attr('src'),\n          }\n        },\n        'id'\n      )\n\n      let total = $('.result-title')\n        .text()\n        .match(/(（.+）)/gi)\n      total = total\n        ? Math.ceil(parseInt(total[0].replace(/（|）/gi, '')) / bzPageSize)\n        : 0\n      let pageTotal = total\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List($('#chapterlistload').find('a'), ($a) => {\n    return {\n      url: $a.attr('href'),\n      title: $a.text(),\n      // showTitle: $a.text(),\n      maxPageCount: parseInt($a.find('span').text().replace(/（|）/gi, '')),\n    }\n  })\n  setData({\n    list,\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "function getOnepicImg(urlpath, item, pageIndex, mgIndex, HOST) {\n  const that = this\n  const { url, maxPageCount, title } = item\n\n  const murl = getShowUrl(mgIndex, libutil.getUrlById(url, HOST), maxPageCount)\n  console.log('murl', murl)\n  that.getOnlineMap = function () {\n    return {\n      Referer: murl,\n    }\n  }\n\n  function getShowUrl(cpg, defaultCurl, maxPageCount) {\n    var _url\n    if (cpg == 1) {\n      _url = defaultCurl\n    } /* else if (cpg == maxPageCount) {\n\t    \t_url = this.endMg\n\t    }*/ else {\n      var croot = defaultCurl.substring(0, defaultCurl.length - 1) + '-p'\n      _url = croot + cpg + '/'\n    }\n    return _url\n  }\n\n  function getParams(url) {\n    return new Promise((resolve, reject) => {\n      var mm = url.split('?')[0]\n      var re = /m\\d+-p(\\d+)\\/?/\n      var mat = mm.match(re) || [0, 1]\n      console.log('开始获取图片所需要的参数')\n      // console.log(url)\n\n      libutil\n        .suagent(url)\n        .then(({ text }) => {\n          console.log('图片所需要的参数获取成功')\n          const $ = cheerio.load(text)\n          const $ss = $('head').find('script')\n          let phtml = ''\n          forEach$list($ss, ($s) => {\n            var html = $s.html()\n            if (html.indexOf('var MANGABZ_CID') != -1) {\n              phtml = html\n              return\n            }\n          })\n          phtml = phtml.replace(\n            'reseturl(window.location.href, MANGABZ_CURL.substring(0, MANGABZ_CURL.length - 1));',\n            ''\n          )\n          const params = libutil.execParams(phtml)\n          // console.log('params是什么？', phtml, params)\n          params.MANGABZ_PAGE = parseInt(mat[1])\n          resolve(params)\n        })\n        .catch(reject)\n    })\n  }\n\n  function getImgurl(url, params) {\n    // console.log(params)\n    return new Promise((resolve, reject) => {\n      // var url =\n      // var url =\n      const prs = {\n        cid: params.MANGABZ_CID,\n        page: params.MANGABZ_PAGE,\n        key: '',\n        _cid: params.MANGABZ_CID,\n        _mid: params.MANGABZ_MID,\n        _dt: params.MANGABZ_VIEWSIGN_DT.split(' ').join('+'),\n        _sign: params.MANGABZ_VIEWSIGN,\n      }\n\n      // selfmkdir(`${dirpath}/${params.MANGABZ_CURL.replace(/\\//ig, '')}`)\n      console.log('开始获取图片地址', url, prs)\n\n      libutil\n        .suagent(url + 'chapterimage.ashx?' + libutil.trans(prs), {\n          setMap: {\n            Referer: url,\n          },\n        })\n        .then(function ({ text }) {\n          eval(text)\n          if (!text) {\n            reject('error')\n            console.log('获取图片地址失败！')\n            return\n          }\n          console.log('图片地址如下：')\n          console.log(d[0])\n          resolve(d[0])\n        })\n        .catch((err) => {\n          console.log('err', err)\n          reject(err)\n        })\n      // .query(prs)\n      // .set('Cookie', cookie)\n      // .set('User-Agent', ' Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Aoyou/UWw7YQlYOVZ9M3haXXN2OLgCJxZ_UrUY8V3G22OqBgD13uvfV4p6DDBNbA==')\n    })\n  }\n\n  getParams(murl)\n    .then((params) => {\n      getImgurl(libutil.getUrlById(url, HOST), params)\n        .then((res) => {\n          setData(res)\n        })\n        .catch((err) => {\n          console.log('err', err)\n          setData('')\n        })\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1680244139527": {
+			"info": {
+				"id": 1680244139527,
+				"url": "https://xmanhua.com/",
+				"name": "X漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"gbkType": "",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var atr = '&page=' + pageIndex\n  atr = pageIndex <= 1 ? '' : atr\n  // const domain = 'mangabz.com'\n  const bzPageSize = 12\n  var url = HOST + 'search/?title=' + encodeURIComponent(searchval) + atr\n\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.mh-list').find('li'),\n        ($item) => {\n          return {\n            bgType: 'ne0s',\n            id: $item.find('.title a').attr('href'),\n            name: $item.find('.title').text(),\n            cover: $item.find('.mh-cover').attr('src'),\n          }\n        },\n        'id'\n      )\n\n      let total = $('.result-title')\n        .text()\n        .match(/(（.+）)/gi)\n      total = total\n        ? Math.ceil(parseInt(total[0].replace(/（|）/gi, '')) / bzPageSize)\n        : 0\n      let pageTotal = total\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}\n",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List($('#chapterlistload').find('a'), ($a) => {\n    return {\n      url: $a.attr('href'),\n      title: $a.text(),\n      // showTitle: $a.text(),\n      maxPageCount: parseInt($a.find('span').text().replace(/（|）/gi, '')),\n    }\n  })\n  setData({\n    list,\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "function getOnepicImg(urlpath, item, pageIndex, mgIndex, HOST) {\n  const that = this\n  const { url, maxPageCount, title } = item\n\n  const murl = getShowUrl(mgIndex, libutil.getUrlById(url, HOST), maxPageCount)\n  console.log('murl', murl)\n  that.getOnlineMap = function () {\n    return {\n      Referer: murl,\n    }\n  }\n\n  function getShowUrl(cpg, defaultCurl, maxPageCount) {\n    var _url\n    if (cpg == 1) {\n      _url = defaultCurl\n    } /* else if (cpg == maxPageCount) {\n\t    \t_url = this.endMg\n\t    }*/ else {\n      var croot = defaultCurl.substring(0, defaultCurl.length - 1) + '-p'\n      _url = croot + cpg + '/'\n    }\n    return _url\n  }\n\n  function getParams(url) {\n    return new Promise((resolve, reject) => {\n      var mm = url.split('?')[0]\n      var re = /m\\d+-p(\\d+)\\/?/\n      var mat = mm.match(re) || [0, 1]\n      console.log('开始获取图片所需要的参数')\n      // console.log(url)\n\n      libutil\n        .suagent(url)\n        .then(({ text }) => {\n          console.log('图片所需要的参数获取成功')\n          const $ = cheerio.load(text)\n          const $ss = $('head').find('script')\n          let phtml = ''\n          forEach$list($ss, ($s) => {\n            var html = $s.html()\n            if (html.indexOf('var XMANHUA_CID') != -1) {\n              phtml = html\n              return\n            }\n          })\n          phtml = phtml.replace(\n            'reseturl(window.location.href, XMANHUA_CURL.substring(0, XMANHUA_CURL.length - 1));',\n            ''\n          )\n          const params = libutil.execParams(phtml)\n          // console.log('params是什么？', phtml, params)\n          params.XMANHUA_PAGE = parseInt(mat[1])\n          resolve(params)\n        })\n        .catch(reject)\n    })\n  }\n\n  function getImgurl(url, params) {\n    // console.log(params)\n    return new Promise((resolve, reject) => {\n      // var url =\n      // var url =\n      const prs = {\n        cid: params.XMANHUA_CID,\n        page: params.XMANHUA_PAGE,\n        key: '',\n        _cid: params.XMANHUA_CID,\n        _mid: params.XMANHUA_MID,\n        _dt: params.XMANHUA_VIEWSIGN_DT.split(' ').join('+'),\n        _sign: params.XMANHUA_VIEWSIGN,\n      }\n\n      // selfmkdir(`${dirpath}/${params.MANGABZ_CURL.replace(/\\//ig, '')}`)\n      console.log('开始获取图片地址', url, prs)\n\n      libutil\n        .suagent(url + 'chapterimage.ashx?' + libutil.trans(prs), {\n          setMap: {\n            Referer: url,\n          },\n        })\n        .then(function ({ text }) {\n          eval(text)\n          if (!text) {\n            reject('error')\n            console.log('获取图片地址失败！')\n            return\n          }\n          console.log('图片地址如下：')\n          console.log(d[0])\n          resolve(d[0])\n        })\n        .catch((err) => {\n          console.log('err', err)\n          reject(err)\n        })\n      // .query(prs)\n      // .set('Cookie', cookie)\n      // .set('User-Agent', ' Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Aoyou/UWw7YQlYOVZ9M3haXXN2OLgCJxZ_UrUY8V3G22OqBgD13uvfV4p6DDBNbA==')\n    })\n  }\n\n  getParams(murl)\n    .then((params) => {\n      getImgurl(libutil.getUrlById(url, HOST), params)\n        .then((res) => {\n          setData(res)\n        })\n        .catch((err) => {\n          console.log('err', err)\n          setData('')\n        })\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1680854253643": {
+			"info": {
+				"id": 1680854253643,
+				"url": "https://www.52shuku.vip/",
+				"name": "52书库",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(search, pageIndex = 1, HOST) {\n  // search = encodeURIComponent(search)\n  // /search.html?searchkey=游戏王\n  const url = `${HOST}/so/search.php?q=${encodeURIComponent(\n    '搜索'\n  )}`\n  console.log(url)\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      // return;\n      // console.log(text)\n      const $ = cheerio.load(text)\n      // const total = ($('.yemian').find('.pageinfo').find('strong').eq(1).text())\n      const list = libutil.getListBy$List(\n        $('.content .excerpt'),\n        ($item) => {\n          const $a = $item.find('a').eq(0)\n          return {\n            bgType: 'ne0s',\n            id: $a.attr('href'),\n            name: $a.text(),\n            // cover: $a.find('img').attr('src'),\n          }\n        },\n        'id'\n      )\n      setData({\n        list,\n      })\n    })\n    .catch((e) => {\n      console.log('e', e)\n    })\n}",
+				"chapterStr": "function execList(text, res, HOST) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List(\n    $('.list li'),\n    ($li) => {\n      const $a = $li.find('a')\n      const title = $a.attr('title') || $a.text()\n      return {\n        url: $a.attr('href'),\n        title,\n      }\n    }\n  )\n  setData({\n    list\n  })\n  \n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#nr1')\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1680251426936": {
+			"info": {
+				"id": 1680251426936,
+				"url": "https://www.dongman.la/",
+				"name": "漫画la",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = HOST + `/manhua/so/${encodeURIComponent(searchval)}/`\n\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.cy_list_mh ul'),\n        ($item) => {\n          const $a = $item.find('li a').eq(0)\n          return {\n            bgType: 'ne0s',\n            id: $a.attr('href'),\n            name: $a.find('img').attr('alt'),\n            cover: $a.find('img').attr('src'),\n          }\n        },\n        'id'\n      )\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List($('.cy_plist ul li'), ($li) => {\n    var $a = $li.find('a')\n    return {\n      url: $a.attr('href'),\n      title: $a.text(),\n    }\n  })\n\n  this.getMaxPageCount = function (item, pageIndex) {\n    const url = libutil.getUrlById(item.url, this.host)\n    return new Promise((resolve) => {\n      libutil\n        .suagent(url, {\n          setMap: {\n            Referer: this.host,\n          },\n        })\n        .then((res) => {\n          const $ = cheerio.load(res.text)\n          let txt = ''\n          libutil.forEach$list($('.mdui-typo-subheading'), ($li) => {\n            var litxt = $li.text()\n            if (litxt.indexOf('本章') !== -1) {\n              txt = litxt\n              return false\n            }\n          })\n          console.log('进入maxpagecountle')\n          txt = parseInt(txt.replace(/本章/gi, ''))\n          setData(txt)\n        })\n        .catch((err) => {\n          setData(0)\n        })\n    })\n  }\n\n  setData({\n    list,\n  })\n}",
+				"picListStr": "",
+				"onePicStr": "function getOnepicImg(urlpath, item, pageIndex, mgIndex, HOST) {\n  this.getOnlineMap = function () {\n    return { Referer: this.host }\n  }\n  const url = libutil.getUrlById(item.url, HOST) + `/${mgIndex}.html`\n  libutil\n    .suagent(url, {\n      setMap: {\n        Referer: HOST,\n      },\n    })\n    .then((res) => {\n      const $ = cheerio.load(res.text)\n      console.log('url')\n      setData($('.imgListBox img').attr('src'))\n    })\n    .catch((err) => {\n      setData('')\n    })\n}",
+				"getBookText": "",
+				"getVideoAddress": "",
+				"getMaxPageCountStr": "",
+				"initcbStr": "function initcbStr() {\n  this.getMaxPageCount = function (item, pageIndex) {\n    const url = libutil.getUrlById(item.url, this.host)\n    return new Promise((resolve) => {\n      libutil\n        .suagent(url, {\n          setMap: {\n            Referer: this.host,\n          },\n        })\n        .then((res) => {\n          const $ = cheerio.load(res.text)\n          let txt = ''\n          libutil.forEach$list($('.mdui-typo-subheading'), ($li) => {\n            var litxt = $li.text()\n            if (litxt.indexOf('本章') !== -1) {\n              txt = litxt\n              return false\n            }\n          })\n          console.log('进入maxpagecountle')\n          txt = parseInt(txt.replace(/本章/gi, ''))\n          resolve(txt)\n        })\n        .catch((err) => {\n          resolve(0)\n        })\n    })\n  }\n}"
+			},
+			"downloadTime": 1689870161
+		},
+		"1682060495588": {
+			"info": {
+				"id": 1682060495588,
+				"url": "https://fengchedmp.com/",
+				"name": "风车动漫",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    `index.php/vod/search.html?wd=${encodeURIComponent(searchval)}`,\n    HOST\n  )\n  // console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.show-list li'),\n        ($li) => {\n          const $a = $li.find('.play-img')\n          return {\n            id: $a.attr('href'),\n            name: $li.find('.play-txt h2').eq(0).text(),\n            cover: $a.find('img').attr('original'),\n          }\n        },\n        'id'\n      )\n      let pageTotal = 0\n      // let pageTotal = parseInt($('.pagelink .last').text())\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = []\n  const $listArr = $('.episode-wrap .episode')\n  libutil.forEach$list($('.tag-wrap .tag-slider ul li'), ($item, idx) => {\n    list.push({\n      name: $item.text(),\n      unclearTotal: true,\n      arr: libutil.getListBy$List(\n        $listArr.eq(idx).find('li'),\n        ($li) => {\n          const $a = $li.find('a')\n          if ($a.length === 0) {\n            return\n          }\n          const title = $a.text()\n          return {\n            url: $a.attr('href'),\n            title,\n          }\n        },\n        'url'\n      ),\n    })\n  })\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1682303948615": {
+			"info": {
+				"id": 1682303948615,
+				"url": "https://godamanga.com/",
+				"name": "GoDa漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"gbkType": "",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = libutil.addHost(\n    (pageIndex === 1 ? '' : `/page/${pageIndex}`) +\n      `/?s=${encodeURIComponent(searchval)}`,\n    HOST\n  )\n  console.log(url)\n  // return\n  return libutil\n    .suagent(url, {\n      // isgbk: true,\n      /* data: {\n        keyword: searchval,\n      }, */\n      setMap: {\n        Connection: 'keep-alive',\n        // 'Upgrade-Insecure-Requests': 1,\n        Referer: HOST,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.entries article'),\n        ($li) => {\n          const $a = $li.find('a')\n          return {\n            id: $a.attr('href'),\n            name: $li.find('.entry-title').text(),\n            cover: $a.find('img').attr('src'),\n          }\n        },\n        'id'\n      )\n      const $li = $('.ct-pagination .ct-hidden-sm a')\n      let pageTotal = $li.length + 1\n\n      setData({\n        list,\n        pageTotal,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  libutil\n    .suagent(this.getListUrl.replace('/manga/', '/chapterlist/'))\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n\n      const list = libutil.getListBy$List(\n        $('.listing-chapters_wrap a'),\n        ($a) => {\n          $a.find('span').remove()\n          const title = $a.attr('title') || $a.text()\n          return {\n            url: $a.attr('href'),\n            title,\n          }\n        }\n      )\n      setData({\n        list,\n      })\n    })\n}",
+				"initcbStr": "",
+				"picListStr": "function getpicListImg(urlpath) {\n  function hasdoublehttp(str) {\n    const arr = str.match(/(http(.?):\\/\\/)/gi)\n    const lastitem = arr[arr.length - 1]\n    const spar = str.split(lastitem)\n    const laurl = lastitem + spar[spar.length - 1]\n    return laurl\n  }\n  urlpath = hasdoublehttp(urlpath)\n  this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      // needDecodeURI: 1,\n    }\n  }\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = []\n      libutil.forEach$list(\n        $('.stk-block-content.stk-inner-blocks img'),\n        ($li) => {\n          list.push($li.attr('data-src') || $li.attr('src'))\n        }\n      )\n      setData(list)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1688575134,
+			"key": 1682303948615
+		},
+		"1682471507540": {
+			"info": {
+				"id": 1682471507540,
+				"url": "https://m.biqupao.la/",
+				"name": "biqupao",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(search, pageIndex = 1, HOST) {\n  const url = `${HOST}searchbook.php?search_key=${encodeURIComponent(search)}`\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      // return;\n      // console.log(text)\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('.recommendx .hot_sale'),\n        ($li) => {\n          const $a = $li.find('a')\n          return {\n            id: $a.attr('href'),\n            name: $a.find('.title').text(),\n            author: $a\n              .find('.author')\n              .eq(0)\n              .text()\n              .replace('作者：', '')\n              .trim(),\n          }\n        },\n        'id'\n      )\n      setData({\n        list,\n      })\n    })\n    .catch((e) => {\n      console.log('e', e)\n    })\n}",
+				"chapterStr": "function execList(text, res, HOST) {\n  libutil\n    .suagent(this.getListUrl + '_list.html', {\n      setMap: {\n        referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List($('#chapterlist li'), ($li, i) => {\n        if (i === 0) {\n          return\n        }\n        const $a = $li.find('a')\n        const title = $a.attr('title') || $a.text()\n        return {\n          url: $a.attr('href'),\n          title,\n        }\n      })\n      setData({\n        list,\n      })\n    })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#chaptercontent')\n      $content.find('.chapter-page').remove()\n      $content.find('.readinline').remove()\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			},
+			"downloadTime": 1689870161
+		},
+		"1683611771378": {
+			"info": {
+				"id": 1683611771378,
+				"url": "https://cn.baozimh.com/",
+				"name": "包子漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"search": "https://cn.baozimh.com/search?q=%E6%B8%B8%E6%88%8F",
+				"list": "https://cn.baozimh.com/comic/fuzhaimowangdeyouxi-souhuchangyou"
+			},
+			"grap": {
+				"search": {
+					"list": "html.i-amphtml-singledoc.i-amphtml-standalone>body.__amp.amp-mode-mouse>div#__nuxt>div#__layout>div#layout>div.l-content.search.mt-5>div.pure-g.classify-items",
+					"item": "div.comics-card.pure-u-1-2.pure-u-sm-1-2.pure-u-md-1-4.pure-u-lg-1-6",
+					"name": "div.comics-card__title",
+					"url": "div.comics-card.pure-u-1-2.pure-u-sm-1-2.pure-u-md-1-4.pure-u-lg-1-6"
+				},
+				"list": {
+					"list": "$c:var list = [];\nvar $nodelist = document.querySelectorAll('#chapter-items a')\nfor (var i = 0; i < $nodelist.length; i++) {\n  var node = $nodelist[i]\n  list.push({\n    title: node.innerText,\n    url: node.getAttribute('href'),\n  })\n}\nvar $nodelist = document.querySelectorAll('#chapters_other_list a')\nfor (var i = 0; i < $nodelist.length; i++) {\n  var node = $nodelist[i]\n  list.push({\n    title: node.innerText,\n    url: node.getAttribute('href'),\n  })\n}\nreturn list",
+					"item": "a.comics-chapters__item",
+					"name": "a.comics-chapters__item",
+					"url": "div"
+				},
+				"index": {
+					"searchOkBtn": "$s:https://cn.baozimh.com/search?q=${value}"
+				},
+				"detail": {
+					"content": "$eval:var list = [];\nvar $nodelist = document.querySelectorAll('.comic-contain>div>amp-img')\nfor (var i = 0; i < $nodelist.length; i++) {\n  var node = $nodelist[i]\n  list.push(node.getAttribute('src'))\n}\nreturn list"
+				}
+			},
+			"downloadTime": 1689870161
+		},
+		"1681718914854": {
+			"info": {
+				"id": 1681718914854,
+				"url": "https://www.dogacg.com/",
+				"name": "娱乐-狗次元-写真",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"gbkType": "",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  function getItem($item) {\n    return {\n      // bgType: IMG_TYPE,\n      id: $item.attr('href'),\n      name: $item.find('img').attr('alt') || $item.find('img').attr('title'),\n      cover: $item.find('img').attr('data-src'),\n      // cover: $item.find('.thumbnail').find('img').attr('style').match(/\\(.+\\)/ig)[0].replace(/\\(|\\)|\\\"|\\\"/ig, ''),\n    }\n  }\n  return libutil\n    .suagent(HOST, {\n      data: {\n        s: searchval,\n      },\n      setMap: {\n        referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      console.log('fff', text)\n      const $ = cheerio.load(text)\n      var $as = $('.content-area .site-main .row>div')\n\n      var list = []\n      for (let i = 0, len = $as.length; i < len; i++) {\n        var $item = $as.eq(i).find('.placeholder').find('a').eq(0)\n        // var $item = $li.find('a').eq(0)\n        // console.log($item.find('img').attr('src'))\n        list.push(getItem($item))\n      }\n      let total = 0\n      try {\n        const $mar = $('.numeric-pagination ul li')\n\n        total = parseInt(\n          $mar\n            .eq($mar.length - 2)\n            .find('a')\n            .text()\n        )\n      } catch (e) {}\n      setData({\n        list,\n        pageTotal: total,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, HOST) {\n  const $ = cheerio.load(text)\n  const picList = []\n  libutil.forEach$list($('.article-content .entry-content img'), ($img) => {\n    picList.push($img.attr('src'))\n  })\n  console.log(picList.length)\n  const obj = {\n    // id: that.id,\n    // name,\n    unclearTotal: true,\n    list: [\n      {\n        url: this.id,\n        title: '全集',\n        picList,\n        maxPageCount: picList.length,\n      },\n    ],\n  }\n\n  setData(obj)\n}",
+				"initcbStr": "function initcbStr() {\n  function getItem($item) {\n    return {\n      // bgType: IMG_TYPE,\n      id: $item.attr('href'),\n      name: $item.find('img').attr('alt') || $item.find('img').attr('title'),\n      cover: $item.find('img').attr('data-src'),\n      // cover: $item.find('.thumbnail').find('img').attr('style').match(/\\(.+\\)/ig)[0].replace(/\\(|\\)|\\\"|\\\"/ig, ''),\n    }\n  }\n  function getlistObj(text) {\n    const $ = cheerio.load(text)\n    var $as = $('.content-area .site-main .row>div')\n\n    var list = []\n    for (let i = 0, len = $as.length; i < len; i++) {\n      var $item = $as.eq(i).find('.placeholder').find('a').eq(0)\n      // var $item = $li.find('a').eq(0)\n      // console.log($item.find('img').attr('src'))\n      list.push(getItem($item))\n    }\n    let total = 0\n    try {\n      const $mar = $('.numeric-pagination ul li')\n\n      total = parseInt(\n        $mar\n          .eq($mar.length - 2)\n          .find('a')\n          .text()\n      )\n    } catch (e) {}\n\n    return {\n      list,\n      total,\n    }\n  }\n\n  this.getClassList = () => {\n    return {\n      list: [\n        {\n          key: 'picture-area',\n          name: 'COS专区',\n        },\n        {\n          key: 'gentry-district/aggregate-packaging',\n          name: '精品合集',\n        },\n        {\n          key: 'hamal',\n          name: '搬运',\n        },\n        {\n          key: 'magnetic-zone',\n          name: '磁力专区',\n        },\n        {\n          key: 'free-zone',\n          name: '特摄合集',\n        },\n        {\n          key: 'hot-girl',\n          name: '女神正妹',\n        },\n      ],\n    }\n  }\n\n  this.getListByClass = (data) => {\n    const { classData = {}, pageIndex = 1 } = data\n    let { key } = classData\n    // console.log('没进list data么', classData)\n    let url = this.host+ key\n    if (pageIndex != 1) {\n      url += '/page/' + pageIndex + '/'\n    }\n    console.log(url)\n    // 跟搜索是一样的，只是searchval是链接地址\n    return libutil\n      .suagent(url, {\n        setMap: {\n          // referer: HOST,\n        },\n      })\n      .then(({ text }) => {\n        // console.log(text)\n       return this.dealDataByClassList(getlistObj(text))\n      })\n  }\n}\n",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1685347169874": {
+			"info": {
+				"id": 1685347169874,
+				"url": "http://www.yetianlian.org/",
+				"name": "何以笙箫默小说",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(search, pageIndex = 1, HOST) {\n  // search = encodeURIComponent(search)\n  // /search.html?searchkey=游戏王\n  const url = `${HOST}s.php?ie=utf-8&q=${encodeURIComponent(search)}`\n  console.log(url)\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      // return;\n      // console.log(text)\n      const $ = cheerio.load(text)\n      // const total = ($('.yemian').find('.pageinfo').find('strong').eq(1).text())\n      const list = libutil.getListBy$List(\n        $('.so_list .bookbox'),\n        ($li) => {\n          const $a = $li.find('a')\n          return {\n            id: $a.attr('href'),\n            name: $li.find('.bookname').text(),\n            author: $li.find('.author').text().replace('作者：', '').trim(),\n          }\n        },\n        'id'\n      )\n\n      setData({\n        list,\n      })\n    })\n    .catch((e) => {\n      console.log('e', e)\n    })\n}",
+				"chapterStr": "function execList(text, res, HOST) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List($('.listmain dd'), ($li) => {\n    const $a = $li.find('a')\n    const title = $a.attr('title') || $a.text()\n    return {\n      url: $a.attr('href'),\n      title,\n    }\n  })\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#content')\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			},
+			"key": 1685347169874,
+			"downloadTime": 1689870161
+		},
+		"1686727343222": {
+			"info": {
+				"id": 1686727343222,
+				"url": "https://m.mhkan.com/",
+				"name": "漫漫看",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(search, pageIndex = 1, HOST) {\n  // search = encodeURIComponent(search)\n  // /search.html?searchkey=游戏王\n  const url = `${HOST}search/?keywords=${encodeURIComponent(search)}`\n  console.log(url)\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      // return;\n      // console.log(text)\n      const $ = cheerio.load(text)\n      // const total = ($('.yemian').find('.pageinfo').find('strong').eq(1).text())\n      const list = libutil.getListBy$List(\n        $('#update_list .itemBox'),\n        ($li) => {\n          const $a = $li.find('.itemTxt a')\n          return {\n            id: $a.attr('href'),\n            name: $a.text(),\n            cover: $li.find('.itemImg .mip-img').attr('src'),\n          }\n        },\n        'id'\n      )\n\n      setData({\n        list,\n      })\n    })\n    .catch((e) => {\n      console.log('e', e)\n    })\n}",
+				"chapterStr": "function execList(text, res, HOST) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List(\n    $('.comic-chapters .list ul li'),\n    ($li) => {\n      const $a = $li.find('a')\n      const title = $a.attr('title') || $a.text()\n      return {\n        url: $a.attr('href'),\n        title,\n      }\n    }\n  )\n  console.log('list', list)\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "function getpicListImg(urlpath) {\n  // console.log('urlpath', urlpath)\n  // return\n  const ltrim = function (txt, charlist) {\n    charlist = charlist || ' \\t\\n\\r\\x0B'\n    return txt.replace(new RegExp('^[' + charlist + ']+', 'g'), '')\n  }\n  const rtrim = function (txt, charlist) {\n    charlist = charlist || ' \\t\\n\\r\\x0B'\n    return txt.replace(new RegExp('[' + charlist + ']+$', 'g'), '')\n  }\n  const trim = function (txt, charlist) {\n    charlist = charlist || ' \\t\\n\\r\\x0B'\n    return txt.replace(\n      new RegExp('(^[' + charlist + ']+)|([' + charlist + ']+$)', 'g'),\n      ''\n    )\n  }\n  /* this.getOnlineMap = () => {\n    return {\n      referer: urlpath,\n      // needDecodeURI: 1,\n    }\n  } */\n\n  return libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      let phtml = ''\n      let jsstr = ''\n      forEach$list($('script'), ($sc) => {\n        let html = $sc.html()\n        const ssrc = $sc.attr('src')\n        if (html.indexOf('var chapterImages') !== -1) {\n          phtml = html\n        }\n        if (ssrc && ssrc.indexOf('config.js') != -1) {\n          jsstr = ssrc\n        }\n      })\n      var chapterImages\n      var chapterPath\n      var pageImage\n      var hhost = this.host\n\n      eval(phtml)\n      function getChapterImage(prev, filename) {\n        var host = prev || rtrim(hhost, '/')\n        /* if (typeof chapterImageHost !== 'undefined') {\n          host = chapterImageHost\n        } else { */\n        // host = getResHostDomain().trim('/')\n        // }\n        /* if (typeof getCih === 'function') {\n          host = getCih()\n        } */\n        if (filename === undefined) return host + '/images/default/common.png'\n        if (filename.match(/^https?:\\/\\/(images.dmzj.com|imgsmall.dmzj.com)/i))\n          return host + '/showImage.php?url=' + encodeURI(filename)\n        if (filename.match(/^[a-z]\\//i))\n          return (\n            host +\n            '/showImage.php?url=' +\n            encodeURI('https://images.dmzj.com/' + filename)\n          )\n        if (filename.match(/^(http:|https:|ftp:|^)\\/\\//i)) return filename\n        if (filename.match(/^(\\/|images?)/i))\n          return host + '/' + ltrim(filename, '/')\n        filename = trim(chapterPath, '/') + '/' + ltrim(filename, '/')\n        return host + '/' + ltrim(filename, '/')\n      }\n\n      let jsurl = ''\n      try {\n        const a = new URL(jsstr, urlpath)\n        jsurl = a.toString()\n      } catch (e) {}\n      console.log('jsurl', jsurl)\n      libutil.suagent(jsurl).then((res) => {\n        var document = {\n          createElement() {\n            return {}\n          },\n          getElementsByTagName() {\n            return [\n              {\n                parentNode: {\n                  insertBefore() {},\n                },\n              },\n            ]\n          },\n        }\n        var SinConf = ''\n        eval(res.text)\n        if (chapterImages && SinConf) {\n          const imgprev = SinConf.resHost[0].domain[0]\n\n          setData(chapterImages.map((it) => getChapterImage(imgprev, it)))\n        } else {\n          setData([])\n        }\n      })\n      //\n\n      // setData(data.data.current_chapter.chapter_img_list)\n\n      // return setData(window.comicInfo.current_chapter.chapter_newid)\n    })\n}",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1687663654882": {
+			"info": {
+				"id": 1687663654882,
+				"url": "https://www.gdzhongju.com/",
+				"name": "包子zj漫画",
+				"bigType": "manga",
+				"isApp": "0",
+				"isgbk": "0",
+				"gbkType": "",
+				"isAuto": "0",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"tempUrl": {
+				"index": "https://www.gdzhongju.com/",
+				"search": "https://www.gdzhongju.com/index.php/search?key=%E6%B8%B8%E6%88%8F",
+				"list": "https://www.gdzhongju.com/comic/13975",
+				"detail": "https://www.gdzhongju.com/chapter/778718"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body>div#cy_header>div.cy_topper>div.cy_searcher>form>div.cy_search>input.cy_search_txt#key",
+					"searchOkBtn": "$s:https://www.gdzhongju.com/index.php/search?key=${value}"
+				},
+				"search": {
+					"list": "html>body>div.cy_content>div.cy_main>div.cy_list>div.cy_list_r>div.cy_list_mh",
+					"item": "ul",
+					"name": "li.title",
+					"url": "li.title"
+				},
+				"list": {
+					"list": "html>body>div.cy_content2>div.cy_main>div.cy_zhangjie>div.cy_plist#play_0",
+					"item": "li.chapter__item",
+					"name": "li.chapter__item",
+					"url": "p"
+				},
+				"detail": {
+					"content": "$c:var  list = []\n$('.rd-article-wr img').each((i, it) => {\n\tvar $item = $(it)\n\t// 直接获取了多张图片的时候可以用\n\tvar imgsrc = $item.attr('src')\n\t// 直接获取了图片外层的时候再用\n\t// var imgsrc = $item.find('img').attr('data-original')\n\tlist.push(imgsrc)\n})\nreturn list"
+				}
+			}
+		},
+		"1688434004135": {
+			"info": {
+				"id": 1688434004135,
+				"url": "http://www.yhdm.io",
+				"name": "樱花动漫sd",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}/search/${encodeURIComponent(searchval)}`\n  console.log('url', url)\n  return libutil\n    .suagent(url, {\n      setMap: {\n        // Referer: HOST,\n        Connection: 'keep-alive',\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      // console.log(typeof text)\n      const $wrapper = $('.area')\n      const $lis = $wrapper.find('.fire .lpic ul li')\n      const list = []\n      for (let i = 0, len = $lis.length; i < len; i++) {\n        const $tmp = $lis.eq(i).find('a').eq(0)\n        // let name = escapeSpecChart($item.find('.detail a').text())\n\n        let id = $tmp.attr('href')\n        list.push({\n          id,\n          name: $tmp.find('img').attr('alt'),\n          cover: libutil.addHttp($tmp.find('img').attr('src')),\n        })\n      }\n\n      // let $mars = $wrapper.find('.text-center .pagination').eq(0).find('li')\n\n      // let total = parseInt($mars.eq($mars.length - 2).text()) || 0\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = libutil.getListBy$List($('.tabs .movurl ul li'), ($li) => {\n    const $a = $li.find('a')\n    if ($a.length === 0) {\n      return\n    }\n    const title = $a.text()\n    return {\n      url: $a.attr('href'),\n      title,\n    }\n  })\n  setData({\n    list: [\n      {\n        name: '线路1',\n        // name: escapeSpecChart($it.find('h2').text()),\n        unclearTotal: true,\n        arr: list,\n      },\n    ],\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": "function getVideoAddress(urlpath, pageIndex, getListUrl) {\n  let refuri = urlpath\n  console.log('refuri', refuri)\n  libutil.execFnloop((next, count) => {\n    libutil\n      .suagent(refuri, {\n        setMap: this.selfSetMap,\n      })\n      .then((res) => {\n        const $ = cheerio.load(res.text)\n        // let iframeSrc = $('iframe').attr('src')\n        let iframeSrc =\n          'http://tup.yhdm.io/?vid=' + $('#playbox').attr('data-vid')\n        // resolve(iframeSrc)\n        console.log(this.showType, '当前的iframe地址是', iframeSrc)\n        iframeSrc = iframeSrc.split('?vid=')[1]\n        setData(iframeSrc.split('$')[0])\n      })\n      .catch((e) => {\n        console.log('e', e)\n        if (count > 10) {\n          setData('')\n          return\n        }\n        next()\n      })\n  })\n}"
+			}
+		},
+		"1688548277671": {
+			"info": {
+				"id": 1688548277671,
+				"url": "https://www.xbqg777.com/",
+				"name": "x笔趣阁7",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}/search?keyword=${encodeURIComponent(searchval)}`\n  console.log('url', url)\n  return libutil\n    .suagent(url, {\n      setMap: {\n        Referer: HOST,\n        Connection: 'keep-alive',\n      },\n    })\n    .then(({ text }) => {\n      const $ = cheerio.load(text)\n      // console.log(typeof text)\n      const list = libutil.getListBy$List(\n        $('.card'),\n        ($li) => {\n          const $a = $li.find('a')\n          return {\n            id: $a.attr('href'),\n            name: $a.attr('title') || $a.find('.title').text(),\n            // cover: $a.find('img').attr('data-original'),\n            author: $a.find('.author').text(),\n          }\n        },\n        'id'\n      )\n\n      // let $mars = $wrapper.find('.text-center .pagination').eq(0).find('li')\n\n      // let total = parseInt($mars.eq($mars.length - 2).text()) || 0\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = libutil.getListBy$List($('.chapter ol li'), ($li) => {\n    const $a = $li.find('a')\n    if ($a.length === 0) {\n      return\n    }\n    const title = $a.text()\n    return {\n      url: $a.attr('href'),\n      title,\n    }\n  })\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n    .then(({ text }) => {\n      console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#article')\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			}
+		},
+		"1688630638139": {
+			"info": {
+				"id": 1688630638139,
+				"url": "https://www.kankanwu.com",
+				"name": "看看屋",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}/vod-search`\n\n  return libutil\n    .suagent(url, {\n      data: {\n        s: 'vod-search-wd-' + encodeURIComponent(searchval) + '-p-' + pageIndex,\n      },\n      setMap: {\n        Referer: HOST + '/vod-search',\n        'X-Requested-With': 'XMLHttpRequest',\n      },\n      disableTLSCerts: true,\n    })\n    .then(async ({ text }) => {\n      // console.log(text)\n      let jsmap = JSON.parse(text)\n\n      const $ = cheerio.load(jsmap.data.ajaxtxt)\n      // console.log(typeof text)\n      const $lis = $('li')\n      const list = []\n      // console.log($lis.length)\n      for (let i = 0, len = $lis.length; i < len; i++) {\n        const $tmp = $lis.eq(i).find('a').eq(0)\n        // let name = escapeSpecChart($item.find('.detail a').text())\n\n        let id = $tmp.attr('href')\n        list.push({\n          id,\n          name: $tmp\n            .find('img')\n            .attr('alt')\n            .replace('点击播放', '')\n            .replace(/《|》/gi, ''),\n          cover: libutil.addHttp($tmp.find('img').attr('src')),\n        })\n      }\n\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  // const $wrapper = $('.article-related.play_url')\n  // const name = escapeSpecChart($('.book_newtitle').text());\n  const list = []\n  const $as = $('#detail-list .play-list-box')\n\n  forEach$list($as, ($it, idx) => {\n    let tempMap = {\n      name: '线路' + (idx + 1),\n      // name: escapeSpecChart($it.find('h2').text()),\n      unclearTotal: true,\n      arr: [],\n    }\n    // tempMap.name = '线路'\n    // let tempList = [];\n    let map = {}\n\n    forEach$list($it.find('.play-list').find('a'), ($a) => {\n      // const $a = $li.find('a')\n      const href = $a.attr('href')\n      if (href.indexOf('://') != -1 && href.indexOf('http') != 0) {\n        return\n      }\n      let title = $a.text().replace(/\\s|(（.+）)/gi, '')\n\n      tempMap.arr.push({\n        url: href,\n        title,\n        // maxPageCount: parseInt($item.find('span').text().replace(/（|）/ig, ''))\n      })\n      // tempMap.arr.push(outerArr)\n    })\n    list.push(tempMap)\n  })\n\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1688630086247": {
+			"info": {
+				"id": 1688630086247,
+				"url": "http://www.08ys.com",
+				"name": "08影视ys",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}/search/movies-wd-${encodeURIComponent(searchval)}.html`\n\n  return libutil.suagent(url, {}).then(async ({ text }) => {\n    // console.log(text)\n    const $ = cheerio.load(text)\n\n    const list = libutil.getListBy$List(\n      $('.row .item-container'),\n      ($li) => {\n        const $tmp = $li.find('.cover').eq(0)\n        return {\n          id: $tmp.attr('href'),\n          name: $tmp.attr('alt'),\n          cover: libutil.addHttp($tmp.attr('data-original')),\n        }\n      },\n      'id'\n    )\n\n    setData({\n      list,\n    })\n  })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  // const name = escapeSpecChart($('.book_newtitle').text());\n  const list = []\n  const $as = $('.episodes-list-wrapper .episodes-list').find('a')\n  // const $namelis = $('#play').find('.py-tabs').find('li')\n\n  let tempMap = {\n    name: '线路1',\n    // name: escapeSpecChart($namelis.eq(idx).text()),\n    unclearTotal: true,\n    arr: [],\n  }\n  // tempMap.name = '线路'\n  // let tempList = [];\n  if ($as.length == 0) {\n    const $a = $('.play-button')\n    tempMap.arr.push({\n      url: $a.attr('href'),\n      title: '全集',\n    })\n  } else {\n    libutil.forEach$list($as, ($a) => {\n      tempMap.arr.push({\n        url: $a.attr('href'),\n        title: $a.text(),\n        // maxPageCount: parseInt($item.find('span').text().replace(/（|）/ig, ''))\n      })\n      // tempMap.arr.push(outerArr)\n    })\n  }\n  list.push(tempMap)\n\n  const obj = {\n    // id: that.id,\n    // name,\n    unclearTotal: true,\n    list: list.filter((it) => it.arr.length != 0),\n  }\n\n  setData(obj)\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": "function getVideoAddress(urlpath, pageIndex, getListUrl) {\n  let refuri = urlpath\n  console.log('refuri', refuri)\n\n  function geturi2(html, refuri) {\n    var iframeSrc = ''\n    var check_player = function (count, rameSrc) {\n      iframeSrc = rameSrc\n    }\n    eval(html)\n    console.log('iframeSrc是什么', iframeSrc)\n    const [, mmr] = iframeSrc.split('?code=')\n    console.log('code是这个', mmr)\n    let url = libutil.atob(mmr)\n    return url\n  }\n  libutil.execFnloop((next, icount) => {\n    libutil\n      .suagent(refuri, {\n        setMap: {\n          referer: this.getListUrl,\n        },\n        // disableTLSCerts: true,\n      })\n      .then((res) => {\n        // console.log('mmmmmmm', res.text);\n        const $ = cheerio.load(res.text)\n        var phtml = ''\n        libutil.forEachRerverse$list($('script'), ($s) => {\n          let html = $s.html()\n          if (html.indexOf('check_player(') != -1) {\n            // p = getIframeSrc(html)\n            phtml = html\n            return false\n          }\n        })\n        setData(geturi2(phtml))\n        // resolve(p)\n        // return p;\n      })\n      .catch((err) => {\n        console.log(err)\n        if (icount > 10) {\n          setData()\n          return\n        }\n        next()\n      })\n  })\n}"
+			}
+		},
+		"1688628970978": {
+			"info": {
+				"id": 1688628970978,
+				"url": "http://www.1vys.com/",
+				"name": "1v影视ys",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}search/-------------.html?wd=${encodeURIComponent(\n    searchval\n  )}`\n\n  return libutil.suagent(url, {}).then(async ({ text }) => {\n    // console.log(text)\n    const $ = cheerio.load(text)\n\n    const list = libutil.getListBy$List(\n      $('#searchList li'),\n      ($li) => {\n        const $a = $li.find('.thumb a').eq(0)\n        return {\n          id: $a.attr('href'),\n          name: $a.attr('title'),\n          cover: libutil.addHttp($a.attr('data-original')),\n        }\n      },\n      'id'\n    )\n    let $mars = $('#page').find('a')\n    let total = 0\n    try {\n      total =\n        parseInt(\n          $mars\n            .eq($mars.length - 1)\n            .attr('href')\n            .split('----------')[1]\n        ) || 0\n    } catch (e) {}\n    setData({\n      list,\n      total,\n    })\n  })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = []\n  // const $as = $('#detail-list .play-list-box')\n\n  libutil.forEach$list($('.sort-list'), ($it, idx) => {\n    let tempMap = {\n      name: '线路' + (idx + 1),\n      // name: escapeSpecChart($it.find('a').text()),\n      unclearTotal: true,\n      arr: libutil.getListBy$List($it.find('li'), ($li) => {\n        const $a = $li.find('a')\n        return {\n          url: $a.attr('href'),\n          title: $a.text(),\n        }\n      }),\n    }\n\n    list.push(tempMap)\n  })\n\n  const obj = {\n    // id: that.id,\n    // name,\n    unclearTotal: true,\n    list: list.filter((it) => it.arr.length != 0),\n  }\n  setData(obj)\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": "function getVideoAddress(urlpath, pageIndex, getListUrl) {\n  let refuri = urlpath\n  console.log('refuri', refuri)\n  function getVideoUrl(tx) {\n    var player_aaaa = {}\n    eval(tx)\n    return player_aaaa.url\n  }\n  libutil.execFnloop((next, icount) => {\n    libutil\n      .suagent(refuri, {\n        setMap: {\n          referer: this.getListUrl,\n        },\n        // disableTLSCerts: true,\n      })\n      .then((res) => {\n        const $ = cheerio.load(res.text)\n\n        var currentChapteridHtml = ''\n        libutil.forEach$list($('script'), ($s) => {\n          let html = $s.html()\n          if (html.indexOf('player_aaaa') != -1) {\n            // eval(html)\n            currentChapteridHtml = html\n          }\n        })\n        var videour = getVideoUrl(currentChapteridHtml)\n        setData(videour)\n      })\n      .catch((err) => {\n        if (err.is404 || icount > 10) {\n          setData('')\n          return\n        }\n        next()\n      })\n  })\n}"
+			}
+		},
+		"1688625287057": {
+			"info": {
+				"id": 1688625287057,
+				"url": "http://www.feijisu6.com/",
+				"name": "飞急速",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}search/` + encodeURIComponent(searchval)\n\n  function getSearchList(phtml, pmhtml, q, host) {\n    // var q = ''\n    var $ = function () {\n      return {\n        html() {},\n        val() {},\n      }\n    }\n    var murl = '',\n      mparam = {}\n    var document = {\n      location: {},\n    }\n    $.get = function (url, params) {\n      murl = url\n      mparam = params\n    }\n    eval(pmhtml)\n    eval(phtml)\n    console.log(murl, mparam)\n    return new Promise((resolve) => {\n      libutil\n        .suagent(murl, {\n          setMap: {\n            // referer: host,\n            Origin: host,\n            referer: host,\n          },\n          data: mparam,\n        })\n        .then((res) => {\n          var txt = res.text.trim()\n          console.log('没得文本？', txt)\n          /* let json = []\n          try {\n            json = JSON.parse(txt)\n          } catch (e) {\n            console.log('eeee', e)\n          } */\n          var json = []\n          txt = 'var json =' + txt\n          eval(txt)\n          resolve(json)\n        })\n    })\n  }\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        Connection: 'keep-alive',\n        'Upgrade-Insecure-Requests': 1,\n        // Referer: host,\n      },\n    })\n    .then(async ({ text }) => {\n      // console.log(text)\n      const $ = cheerio.load(text)\n\n      var phtml = ''\n      var pmhtml = ''\n      libutil.forEach$list($('script'), ($s) => {\n        var html = $s.html()\n        if (html.indexOf('$.get') !== -1) {\n          phtml = html\n        } else if (html.indexOf('my_search')) {\n          pmhtml = html\n        }\n      })\n      getSearchList(phtml, pmhtml, searchval, HOST)\n        .then((pmlist) => {\n          const list = []\n          pmlist.forEach((it) => {\n            // let id = transUrlIdAll(it.url)\n            list.push({\n              id: it.url,\n              name: it.title,\n              cover: libutil.addHttp(it.thumb),\n            })\n          })\n\n          // let $mars = $wrapper.find('.text-center .pagination').eq(0).find('li')\n\n          // let total = parseInt($mars.eq($mars.length - 2).text()) || 0\n          setData({\n            list,\n          })\n        })\n        .catch((e) => {\n          console.log('e', e)\n        })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  if ($('.playurl').length > 0) {\n    execList1(text)\n  } else {\n    execList2(text)\n  }\n  function execList2(text) {\n    const $ = cheerio.load(text)\n\n    // const name = escapeSpecChart($('.book_newtitle').text());\n    const list = []\n\n    let tempMap = {\n      name: '线路1',\n      unclearTotal: true,\n      arr: [],\n    }\n    // tempMap.name = '线路'\n    // let tempList = [];\n    tempMap.arr = libutil.getRerverseListBy$List(\n      $('#stab_1_71 ul li'),\n      ($li) => {\n        const $a = $li.find('a')\n        if ($li.hasClass('btn') || $a.attr('href') == '#') {\n          return\n        }\n\n        let title = $a.text()\n\n        return {\n          url: $a.attr('href'),\n          title,\n          // maxPageCount: parseInt($item.find('span').text().replace(/（|）/ig, ''))\n        }\n        // tempMap.arr.push(outerArr)\n      }\n    )\n    list.push(tempMap)\n    const obj = {\n      // id: that.id,\n      // name,\n      unclearTotal: true,\n      list: list.filter((it) => it.arr.length != 0),\n    }\n\n    setData(obj)\n  }\n  function execList1(text) {\n    const $ = cheerio.load(text)\n\n    // const name = escapeSpecChart($('.book_newtitle').text());\n    const list = []\n\n    libutil.forEach$list($('.playurl li'), ($it, idx) => {\n      let tempMap = {\n        // name: '线路'+(idx+1),\n        name: $it.text(),\n        unclearTotal: true,\n        arr: [],\n      }\n      // tempMap.name = '线路'\n      // let tempList = [];\n      tempMap.arr = libutil.getRerverseListBy$List(\n        $('.details-con2-list').eq(idx).find('li'),\n        ($li) => {\n          const $a = $li.find('a')\n          if ($li.hasClass('btn') || $a.attr('href') == '#') {\n            return\n          }\n\n          let title = $a.text()\n\n          return {\n            url: $a.attr('href'),\n            title,\n            // maxPageCount: parseInt($item.find('span').text().replace(/（|）/ig, ''))\n          }\n          // tempMap.arr.push(outerArr)\n        }\n      )\n      list.push(tempMap)\n    })\n    const obj = {\n      // id: that.id,\n      // name,\n      unclearTotal: true,\n      list: list.filter((it) => it.arr.length != 0),\n    }\n    setData(obj)\n  }\n}",
+				"initcbStr": "function initcbStr() {\n  this.getWeburlByUrlAsId = function (urlAsId) {\n    let a = libutil.getUrlById(urlAsId, this.host)\n    a = a.replace(this.host, '')\n    return libutil.getUrlById(a, this.getListUrl)\n  }\n  this.isM3u8Type = function (sType) {\n    if (sType == 'application/x-mpegurl') {\n      return true\n    }\n  }\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1688621636187": {
+			"info": {
+				"id": 1688621636187,
+				"url": "https://www.agemys.org/",
+				"name": "age网址1",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}search?query=${encodeURIComponent(\n    searchval\n  )}&page=${pageIndex}`\n  return libutil\n    .suagent(url, {\n      timeout: 300000,\n      setMap: {\n        Referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      // console.log(text)\n      const $ = cheerio.load(text)\n      const list = libutil.getListBy$List(\n        $('#search_results_wrapper').find('.card'),\n        ($li) => {\n          const $tmp = $li.find('a')\n\n          return {\n            id: $tmp.attr('href'),\n            name: $tmp.attr('title'),\n            cover: libutil.addHttp($tmp.find('img').attr('data-original')),\n            // author: $a.find('.author').text(),\n          }\n        },\n        'id'\n      )\n\n      // let $mars = $wrapper.find('.text-center .pagination').eq(0).find('li')\n\n      // let total = parseInt($mars.eq($mars.length - 2).text()) || 0\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = []\n  // let tempList = [];\n  const $as = $('.tab-content .tab-pane')\n  const $namelis = $('.nav-pills li')\n  let downloadLine = 0\n\n  forEach$list($as, ($it, idx) => {\n    let tempMap = {\n      // name: '线路'+(idx+1),\n      name: $namelis.eq(idx).text(),\n      unclearTotal: true,\n      arr: [],\n    }\n    downloadLine = $namelis.eq(idx).hasClass('active') ? idx : downloadLine\n    let $lis = $it.find('ul').find('li')\n\n    if ($lis.length == 0) {\n      return\n    }\n\n    forEach$list($lis, ($li) => {\n      const $a = $li.find('a')\n      let title = $a.text()\n\n      tempMap.arr.push({\n        url: $a.attr('href'),\n        title,\n        // maxPageCount: parseInt($item.find('span').text().replace(/（|）/ig, ''))\n      })\n      // tempMap.arr.push(outerArr)\n    })\n    list.push(tempMap)\n  })\n\n  setData({\n    downloadLine,\n    list,\n  })\n}",
+				"initcbStr": "function initcbStr() {\n  this.getWeburlByUrlAsId = function (urlAsId) {\n    return libutil.getUrlById(urlAsId, this.host)\n  }\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1688606759114": {
+			"info": {
+				"id": 1688606759114,
+				"url": "http://www.wwwbxwx.com/",
+				"name": "bxwx笔下文学",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "1",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  const url = `${HOST}modules/article/search.php?submit=${libutil.getGbkStr(\n    '搜索'\n  )}\n  &searchkey=${libutil.getGbkStr(searchval)}&page=${pageIndex}`\n  console.log(url)\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n      isgbk: true,\n    })\n    .then(({ text }) => {\n      // return;\n      // console.log(text)\n      const $ = cheerio.load(text)\n\n      let total =\n        libutil.execUrlParams($('#pagelink .last').attr('href') || '').page || 0\n\n      const list = libutil.getListBy$List(\n        $('.grid tbody tr'),\n        ($item, idx) => {\n          if (idx == 1) {\n            return\n          }\n          const $a = $item.find('td').eq(0).find('a')\n          return {\n            id: $a.attr('href'),\n            name: $a.text(),\n            // cover: $a.find('img').attr('data-original'),\n            author: $item.find('td').eq(2).text(),\n          }\n        },\n        'id'\n      )\n\n      // let $mars = $wrapper.find('.text-center .pagination').eq(0).find('li')\n\n      // let total = parseInt($mars.eq($mars.length - 2).text()) || 0\n      setData({\n        list,\n        total,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = libutil.getListBy$List($('.chapterlist li'), ($li) => {\n    const $item = $li.find('a')\n    if ($item.length == 0) {\n      return\n    }\n    let url = $item.attr('href')\n\n    let title = $item.text()\n\n    return {\n      url,\n      title,\n    }\n  })\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n  urlpath = libutil.combUrl(urlpath.replace(this.host, ''), this.getListUrl)\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n      isgbk: this.isgbk,\n    })\n    .then(({ text }) => {\n      console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#htmlContent')\n      $content.find('a').eq(0).remove()\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			}
+		},
+		"1688608320081": {
+			"info": {
+				"id": 1688608320081,
+				"url": "https://www.ibiquges.com/",
+				"name": "ib笔趣阁",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"isAuto": "1"
+			},
+			"use": "auto",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  const url = `${HOST}modules/article/waps.php`\n  console.log('url', url)\n  return libutil\n    .suagent('get', url, {\n      data: {\n        searchkey: searchval,\n        // keyWord: searchval,\n      },\n      setMap: {\n        Referer: HOST,\n        'Content-Type': 'application/x-www-form-urlencoded',\n      },\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n\n      const list = libutil.getListBy$List(\n        $('#content table tbody tr'),\n        ($item, i) => {\n          if (i === 0) {\n            return\n          }\n\n          const $tmp = $item.find('td').eq(0).find('a')\n          let name = $tmp.text()\n\n          let id = $tmp.attr('href')\n          // console.log(id)\n          return {\n            id,\n            author: $item.find('td').eq(2).text().trim(),\n            name,\n          }\n        },\n        'id'\n      )\n\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n\n  const list = libutil.getListBy$List(\n    $('#list').find('dl').find('dd'),\n    ($li) => {\n      const $item = $li.find('a')\n      if ($item.length == 0) {\n        return\n      }\n      let url = $item.attr('href')\n      let title = $item.text()\n\n      return {\n        url,\n        title,\n      }\n    }\n  )\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n  console.log('urlpath', urlpath)\n  libutil\n    .suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n      isgbk: this.isgbk,\n    })\n    .then(({ text }) => {\n      console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#content')\n      $content.find('p').eq(0).remove()\n      let ctnText = $content.text()\n      setData(ctnText)\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			}
+		},
+		"1689574069476": {
+			"info": {
+				"id": 1689574069476,
+				"url": "https://www.yhvod.cc/",
+				"name": "樱花vod",
+				"bigType": "dongman",
+				"isApp": "0",
+				"isgbk": "0",
+				"gbkType": "",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "auto",
+			"tempUrl": {
+				"index": "https://www.yhvod.cc/",
+				"search": "https://www.yhvod.cc/search?kw=%E6%B8%B8%E6%88%8F%E7%8E%8B",
+				"list": "https://www.yhvod.cc/view/767.html"
+			},
+			"grap": {
+				"index": {
+					"searchInput": "html>body.index>nav.navbar.navbar-inverse>div.container>form.navbar-form.navbar-right.ff-search.visible-lg.pl-0.pr-2>div.input-group.input-group-sm>input.form-control.ff-wd#ff-wd",
+					"searchOkBtn": "html>body.index>nav.navbar.navbar-inverse>div.container>form.navbar-form.navbar-right.ff-search.visible-lg.pl-0.pr-2>div.input-group.input-group-sm>div.input-group-btn>button.btn.btn-success"
+				},
+				"search": {
+					"list": "html>body.vod-search>div.container.ff-bg>ul.list-unstyled.vod-item-img.ff-img-215",
+					"item": "li.col-md-2.col-sm-3.col-xs-4",
+					"name": "h2.text-ellipsis.text-mr-1",
+					"url": "h2.text-ellipsis.text-mr-1"
+				},
+				"list": {
+					"list": "html>body.vod-detail>div.container.ff-bg>div.tab-content.ff-playurl-tab>ul.list-unstyled.row.text-center.tab-pane.ff-playurl.ff-playurl-tab-1.fade.in.active",
+					"item": "a.btn.btn-default.btn-block.btn-sm.text-ellipsis",
+					"name": "a.btn.btn-default.btn-block.btn-sm.text-ellipsis",
+					"url": "a.btn.btn-default.btn-block.btn-sm.text-ellipsis"
+				}
+			},
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}search?kw=${encodeURIComponent(searchval)}`\n\n  return libutil\n    .suagent(url, {\n      setMap: {\n        referer: HOST,\n      },\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n\n      const list = libutil.getListBy$List(\n        $('ul.list-unstyled li'),\n        ($a, i) => {\n          var $item = $a.find('a').eq(0)\n\n          // console.log(id)\n          return {\n            id: $item.attr('href'),\n            name: $item.find('img').attr('alt'),\n            cover: $item.find('img').attr('src'),\n          }\n        },\n        'id'\n      )\n\n      let $mars = $('.pagination li')\n      let total =\n        parseInt(\n          libutil.execUrlParams(\n            $mars\n              .eq($mars.length - 1)\n              .find('a')\n              .attr('href') || ''\n          ).page\n        ) || 0\n      setData({\n        list,\n        total,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  const $ = cheerio.load(text)\n  const list = []\n  const $listjqArr = $('.nav-tabs').eq(0).find('li')\n  const $ctnlist = $('.tab-content ul')\n  libutil.forEach$list($listjqArr, ($item, idx) => {\n    list.push({\n      name: $item.attr('text'),\n      // name: escapeSpecChart($it.find('h2').text()),\n      unclearTotal: true,\n      arr: libutil.getListBy$List(\n        $ctnlist.eq(idx).find('li'),\n        ($li) => {\n          const $a = $li.find('a')\n          if ($a.length === 0) {\n            return\n          }\n          const title = $a.text()\n          return {\n            url: $a.attr('href'),\n            title,\n          }\n        },\n        'url'\n      ),\n    })\n  })\n  setData({\n    list,\n  })\n}",
+				"initcbStr": "",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "",
+				"getVideoAddress": ""
+			}
+		},
+		"1689744459124": {
+			"info": {
+				"id": 1689744459124,
+				"url": "http://www.astxt.org/",
+				"name": "爱书楼",
+				"bigType": "book",
+				"isApp": "0",
+				"isgbk": "0",
+				"gbkType": "",
+				"isAuto": "1",
+				"isLogin": "0"
+			},
+			"use": "grap",
+			"auto": {
+				"searchStr": "function search(searchval, pageIndex, HOST) {\n  var url = `${HOST}ar.php`\n\n  return libutil\n    .suagent('post', url, {\n      setMap: {\n        referer: HOST,\n        'Content-Type': 'application/x-www-form-urlencoded',\n      },\n      data: {\n        keyWord: searchval,\n      },\n      // disableTLSCerts: true,\n    })\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n\n      const list = libutil.getListBy$List(\n        $('.search-list li'),\n        ($a, i) => {\n          var $item = $a.find('a').eq(0)\n\n          var $it = $item.find('.name')\n          const author = $it.find('.author').text()\n          // console.log(id)\n          return {\n            id: $item.attr('href'),\n            name: $it.text().replace(author, ''),\n            // cover: libutil.addHttp($item.find('img').attr('src')),\n            author,\n          }\n        },\n        'id'\n      )\n\n      setData({\n        list,\n      })\n    })\n}",
+				"chapterStr": "function execList(text, res, host) {\n  function getlist(text) {\n    const $ = cheerio.load(text)\n    const list = libutil.getListBy$List($('#main .list li'), ($li) => {\n      const $item = $li.find('a')\n      if ($item.length == 0) {\n        return\n      }\n      let url = $item.attr('href')\n      let title = $item.text()\n\n      return {\n        url,\n        title,\n      }\n    })\n    return list\n  }\n  //\n  let list = getlist(text)\n\n  const $ = cheerio.load(text)\n  const $pagelist = $('.pages select option')\n  let errcount = 0\n  libutil.execFnloop((next, icount, current) => {\n    if (icount >= $pagelist.length) {\n      setData({\n        list,\n      })\n      return\n    }\n    const $item = $pagelist.eq(icount)\n    const url = host + $item.attr('value')\n    console.log('url', url)\n    libutil\n      .suagent('get', host + $item.attr('value'), {\n        setMap: {\n          referer: this.getListUrl,\n        },\n      })\n      .then((res) => {\n        errcount = 0\n        const arr = getlist(res.text)\n        console.log('arr', arr)\n        list = list.concat(arr)\n        setTimeout(() => {\n          next()\n        }, 2000)\n      })\n      .catch((err) => {\n        console.log('err', err)\n        errcount++\n        if (errcount > 3) {\n          setTimeout(() => {\n            next()\n          }, 2000)\n          return\n        }\n        current()\n      })\n  })\n}",
+				"initcbStr": "function initcbStr() {\n  this.dealChapterText2list = function (text) {\n    const $ = cheerio.load(text)\n    const list = libutil.getListBy$List($('#main .list li'), ($li) => {\n      const $item = $li.find('a')\n      if ($item.length == 0) {\n        return\n      }\n      let url = $item.attr('href')\n      let title = $item.text()\n\n      return {\n        url,\n        title,\n      }\n    })\n    return list\n  }\n  this.isChapterPaging = true\n  this.getChapterPageRuleListByText = function (text) {\n    const $ = cheerio.load(text)\n    return libutil.getListBy$List(\n      $('.pages select option'),\n      ($item) => {\n        return {\n          url: this.host + $item.attr('value'),\n        }\n      },\n      'url'\n    )\n  }\n  this.execListByPageIndex = function (item) {\n    return this.suagent('get', item.url, {\n      setMap: {\n        referer: this.getListUrl,\n      },\n    })\n      .then((res) => {\n        return this.dealChapterText2list(res.text)\n      })\n      .catch((err) => {\n        console.log('errr', err)\n        return []\n      })\n  }\n}",
+				"picListStr": "",
+				"onePicStr": "",
+				"getBookText": "function getBookText(urlpath, pageIndex) {\n  // console.log('urlpath', urlpath)\n\n  const aaget = (urlpath) => {\n    return libutil.suagent(urlpath, {\n      setMap: {\n        Referer: this.getListUrl,\n      },\n    })\n  }\n\n  aaget(urlpath)\n    .then(({ text }) => {\n      // console.log('text', text)\n      const $ = cheerio.load(text)\n      const $content = $('#content')\n      $content.find('p').eq(0).remove()\n      let ctnText = $content.text()\n\n      const $as = $('.g-content-nav').eq(0).find('a')\n      const len = $as.length\n      console.log('len', len)\n      if (len) {\n        const $a = $as.eq($as.length - 1)\n        const url = this.host + $a.attr('href')\n        aaget(url).then(({ text }) => {\n          const $ = cheerio.load(text)\n          const $content = $('#content')\n          let ctnText2 = $content.text()\n\n          setData(ctnText + '\\n' + ctnText2)\n        })\n      } else {\n        setData(ctnText)\n      }\n    })\n    .catch((err) => {\n      console.log('err', err)\n      setData('')\n    })\n}",
+				"getVideoAddress": ""
+			},
+			"key": 1689744459124,
+			"downloadTime": 1689870161
+		}
+	}
+}

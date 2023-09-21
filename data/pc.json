@@ -1,0 +1,7 @@
+{
+  "version": "3.5.1",
+  "link": "https://wwzl.lanzouh.com/b02f5proj",
+  "passwrd": "neos",
+  "description": "有新版本发布，修复删除下载漫画,不清除本地文件的问题",
+  "canDownload": true
+}
