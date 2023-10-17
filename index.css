@@ -23,7 +23,7 @@ h2.title {
 }
 
 .content {
-	max-width: 1140px;
+	max-width: 1100px;
 	margin: auto;
 }
 
@@ -250,4 +250,31 @@ h2.title {
 	.content ul li {
 		width: auto;
 	}
+
+	.sidebar {
+		display: none;
+	}
+}
+
+.sidebar {
+	position: fixed;
+	right: 40px;
+	top: 110px;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 1px 1px 11px #ccc;
+}
+
+.sidebar ul li {
+	margin-bottom: 10px;
+}
+
+.sidebar p {
+	margin-bottom: 20px;
+	color: #1171ee;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
 }
