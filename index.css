@@ -4,6 +4,11 @@
 	list-style: none;
 }
 
+.flex {
+	display: flex;
+	align-items: baseline;
+}
+
 .link {
 	cursor: pointer;
 	color: #007bff;
