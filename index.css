@@ -1,35 +1,51 @@
-* {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.container {
+	max-width: 1100px;
+	margin: auto;
 }
 
-.flex {
-	display: flex;
-	align-items: baseline;
-}
-
-.link {
-	cursor: pointer;
-	color: #007bff;
-	text-decoration: underline;
-	font-size: 14px;
+.show-bg {
+	height: 250px;
+	line-height: 1;
+	overflow: hidden;
+	/* width: 1100px; */
+	margin: auto;
+	font-size: 0;
+	/* padding-top: 30px; */
+	text-align: center;
+	background-color: #007bff;
+	background-image: url(./a.png);
+	background-size: 100% auto;
+	background-position: center;
+	background-color: #ff9400;
+	/* background-color: #f9fdff; */
 }
 
 .head {
 	padding: 40px 0;
+	/* height: 200px; */
 	text-align: center;
 	background-color: #f1f1f1;
+	/* background-image: url(./a.jpg); */
 }
 
-h2.title {
+.li-title {
 	text-align: center;
-	margin-bottom: 25px;
+	/* padding: 20px 0 50px; */
+	padding: 50px 0;
 }
+
+
+/*  */
+
+
+/*  */
+
+
 
 .content {
 	max-width: 1100px;
 	margin: auto;
+	padding-top: 20px;
 }
 
 .content ul {
@@ -37,20 +53,29 @@ h2.title {
 	flex-wrap: wrap;
 	flex-direction: row;
 	/* justify-content: center; */
-	justify-content: space-around;
+	/* justify-content: space-around; */
 }
 
 .content ul li {
-	width: 27%;
+	width: 45%;
+	margin: 0 2.5%;
 	margin-bottom: 85px;
 }
 
+.content ul li.item {
+	display: flex;
+}
+
 .content ul li .text {
-	margin-top: 5px;
+	/* margin-top: 5px; */
+	width: calc(100% - 260px);
+	font-size: 14px;
+	margin-left: 10px;
 }
 
 .content ul li .img {
-	/* height: 200px; */
+	height: 120px;
+	width: 250px;
 	font-size: 0;
 	cursor: zoom-in;
 	box-shadow: 1px 1px 11px #ccc;
@@ -65,7 +90,7 @@ h2.title {
 .content ul li .img img {
 	width: 100%;
 	max-width: 100%;
-	max-height: 100%;
+	/* max-height: 100%; */
 }
 
 .bottom {
@@ -88,7 +113,13 @@ h2.title {
 	/* display: flex; */
 }
 
-.img-modal video {}
+#imgDesc {
+	color: #fff;
+	margin-top: 10px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
 
 .img-modal img {
 	max-width: 80%;
@@ -101,52 +132,14 @@ h2.title {
 	color: red;
 }
 
-.button {
-	display: inline-block;
-	border: 1px solid #ccc;
-	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
-	border: 1px solid transparent;
-	padding: 0.375rem 0.75rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border-radius: 0.25rem;
-	text-align: center;
-	width: 200px;
-	cursor: pointer;
-	text-decoration: none;
-}
 
-.button.normal {
-	background-color: transparent;
-	color: #007bff;
-	border-color: #ccc;
-}
 
-.title {
-	font-size: 14px;
-
-}
 
 .sub-title {
 	color: #656565;
 	font-size: 12px;
 }
 
-.download-head {
-	top: 0;
-	margin: auto;
-	/* position: sticky; */
-	z-index: 11;
-	font-size: 0;
-	background-color: #fff;
-	padding: 15px 5vw;
-	display: flex;
-	/* justify-content: space-around; */
-	justify-content: space-between;
-	box-shadow: 1px 1px 11px #ccc;
-}
 
 /*  */
 .mask {
@@ -162,67 +155,6 @@ h2.title {
 	align-items: center;
 }
 
-.prompt_box {
-	/* width: 400px; */
-	/* height: 200px; */
-	background: #ffffff;
-	border-radius: 6px;
-	/* position: fixed; */
-	/* top: 15%; */
-	/* left: 50%; */
-	/* margin-left: -200px; */
-	overflow: hidden;
-}
-
-.prompt_box .prompt_title {
-	height: 40px;
-	line-height: 40px;
-	padding-left: 20px;
-	border-bottom: 2px solid #1a9ebf;
-	/* background: #e6e6e6; */
-	position: relative;
-}
-
-.prompt_box .prompt_title h3 {
-	font-size: 16px;
-	color: #333333;
-	margin-top: 0;
-}
-
-.prompt_box .prompt_cancel {
-	width: 24px;
-	height: 24px;
-	background: url("img/cancel.png") no-repeat;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-.prompt_box .prompt_cont {
-	position: relative;
-	/* height: 158px; */
-	padding: 20px;
-}
-
-.prompt_box .prompt_cont .prompt_text {
-	display: flex;
-}
-
-.prompt_box .prompt_cont .prompt_sure {
-	/* position: absolute; */
-	display: inline-block;
-	right: 20px;
-	bottom: 14px;
-	width: 50px;
-	height: 26px;
-	background: #007bff;
-	border-radius: 5px;
-	color: #ffffff;
-	font-size: 14px;
-	line-height: 26px;
-	text-align: center;
-	cursor: pointer;
-}
 
 .hide {
 	display: none;
@@ -232,24 +164,7 @@ h2.title {
 	display: block;
 }
 
-.qrcod-box {
-	margin: 10px;
-}
 
-.qrcod-box:nth-of-type(1) {
-	margin-right: 80px;
-}
-
-.qr-title {
-	font-size: 18px;
-	margin-bottom: 5px;
-}
-
-.qrcode {}
-
-.qrcode canvas {
-	width: 150px;
-}
 
 @media screen and (max-width: 700px) {
 	.content ul li {
@@ -282,4 +197,9 @@ h2.title {
 .sidebar a {
 	color: #000;
 	text-decoration: none;
+}
+
+.download-ctn .button {
+	margin: 20px;
+	padding: 10px 0;
 }

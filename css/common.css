@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #007bff;
+
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #ccc;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border: 1px solid transparent;
+  padding: 5px 0.75rem;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 0.25rem;
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button.normal {
+  background-color: transparent;
+  color: #007bff;
+  border-color: #ccc;
+}
+
+.button.link {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+}
+
+.float-r {
+  float: right;
+}
+
+.flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.link {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+
+
+.title {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  /* padding: 20px 0; */
+  /* color: #ccc; */
+
+  background-color: #fff;
+  top: 0;
+  position: sticky;
+  /* box-shadow: 1px 1px 11px #ccc; */
+  border-bottom: 1px solid #ccc;
+  box-shadow: 1px 1px 11px #ccc;
+  background-color: #f9fdff;
+
+}
+
+.title-ctn {
+  display: flex;
+  align-items: center;
+  /* height: 52px; */
+  /* line-height: 52px; */
+  padding: 20px 0;
+  width: 1100px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.title .mainname {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3339CF;
+  margin-right: 15px;
+}
+
+.title .mainname img {
+  margin-right: 5px;
+}
+
+.title .mainname img,
+.title .mainname span {
+  vertical-align: middle;
+}
+
+nav {
+  width: auto;
+  text-align: center;
+  border-bottom: 1px solid rgba(30, 0, 255, 0);
+  border-top: 1px solid rgba(30, 0, 255, 0);
+  margin: 0;
+  /* padding: 28px 0; */
+}
+
+nav ul {
+  font-size: 18px;
+  line-height: 1.5em;
+  /* font-family: Roboto Mono; */
+  font-weight: 500;
+  font-style: normal;
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/*  */
+.template {
+  display: none;
+}
+
+/*  */
+.ant-modal-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.ant-modal-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: auto;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ant-modal {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  pointer-events: none;
+  position: relative;
+  top: 100px;
+  width: auto;
+  max-width: calc(100vw - 32px);
+  padding-bottom: 24px;
+}
+
+.ant-modal .ant-modal-content {
+  position: relative;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+  padding: 20px 24px;
+}
+
+.ant-modal .ant-modal-close {
+  position: absolute;
+  top: 17px;
+  inset-inline-end: 17px;
+  z-index: 1010;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.ant-modal .ant-modal-header {
+  color: rgba(0, 0, 0, 0.88);
+  background: #ffffff;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 8px;
+}
+
+.ant-modal .ant-modal-title {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.ant-modal .ant-modal-body {
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  word-wrap: break-word;
+}
+
+.ant-modal .ant-modal-footer {
+  text-align: end;
+  background: transparent;
+  margin-top: 12px;
+}
+
+
+.ant-btn {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  line-height: 1.5714285714285714;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.ant-btn {
+  font-size: 14px;
+  height: 32px;
+  padding: 4px 15px;
+  border-radius: 6px;
+}
+
+.ant-btn-default {
+  background-color: #ffffff;
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.88);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background-color: #1677ff;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+.ant-modal .ant-modal-footer .ant-btn+.ant-btn:not(.ant-dropdown-trigger) {
+  margin-bottom: 0;
+  margin-inline-start: 8px;
+}
+
+.ant-modal-diy {
+  display: none;
+}
+
+/*  */
+.ant-message {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  position: fixed;
+  top: 18px;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1010;
+}
+
+[class^="ant-message"],
+[class*=" ant-message"] {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.ant-message-notice-wrapper {
+  text-align: center;
+}
+
+.ant-message .ant-message-notice-wrapper .ant-message-notice-content {
+  display: inline-block;
+  padding: 9px 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  pointer-events: all;
+  text-align: center;
+}
+
+.message {
+  display: none;
+}

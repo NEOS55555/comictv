@@ -15,10 +15,12 @@
 	<meta name="twitter:card" content="summary">
 	<meta property="twitter:title" content="ComicTv，上班摸鱼，打游戏，在线漫画动漫小说，下载动漫，下载漫画">
 
+	<link crossorigin="" rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#157878">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./index.css">
 	<script src="./js/jquery-1.10.2.min.js"></script>
 	<script src="./js/jquery.qrcode.min.js"></script>
@@ -26,67 +28,49 @@
 </head>
 
 <body>
-	<div class="download-head">
-		<!-- <span class="button" id="showDownloadUrl">查看下载地址</span> -->
-
-		<!-- <span class="button" id="downloadBtn">下载电脑版</span> -->
-		<!-- <span class="button" id="downloadBtnapp">下载手机APP</span> -->
-		<div class="title">
-			<p>ComicTv，享受各种姿势摸🐟的快感</p>
-		</div>
-		<div>
-		</div>
-		<div class="flex">
-			<a target="_blank" href="https://pan.baidu.com/s/13CYxAiRxMEarnaDDKrY_3w?pwd=neos" class="button"
-				style="margin-right: 15px;">备用百度云下载
-				密码:neos</a>
+	<div class="title">
+		<div class="title-ctn">
+			<div class="flex">
+				<div class="mainname">
+					<img src="./favicon.ico" width="24" alt=""><span>ComicTV</span>
+				</div>
+				<nav>
+					<ul>
+						<li>首页</li>
+						<!-- <li>更新文档</li> -->
+						<!-- <li>使用技巧</li> -->
+					</ul>
+				</nav>
+			</div>
+			<!-- <span class="link " class="button normal">软件下载</span> -->
 			<div>
-
-				<span class=" lzylink button">蓝奏云下载
-					密码:neos</span>
-				<div class="sub-title">版本：v3.5.8 ，更新时间：2023-10-31</div>
+				<span id="downloadbutton" class="button">下载</span>
+				<div class="sub-title">版本：v3.5.9 ，更新时间：2023-11-06</div>
 			</div>
 		</div>
-
-		<!-- <span class="link lzylink" class="button normal">备用下载蓝奏云
-			密码:neos</span> -->
 	</div>
-	<!-- <div class="head-2">
-
+	<!-- <div class="show-bg">
 	</div> -->
-	<div class="head">
-		<h2 class="error">软件支持mac,windows系统</h2>
-		<h1 class="nomoyu-key">摸鱼就应该有摸🐟的样子</h1>
-		<!-- <p>(可点击图片放大查看)</p> -->
-	</div>
-	<div class="img-modal" id="imgModal">
-		<img id="imgModalImg" src="" alt="">
-		<video id="imgModalVideo" src="" alt="" controls autoplay></video>
-	</div>
+
+
 	<div class="content">
-		<h2 class="title nomoyu-key" id="moyu" style="margin-top: 20px;">摸鱼模式</h2>
+		<h2 class="li-title nomoyu-key" id="moyu">摸鱼模式</h2>
 		<ul class="nomoyu-key">
-			<li class="item">
-				<div class="img">
-					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/GlI3achRS5Dd2EM.gif" alt="">
-				</div>
-				<p class="text"><b>AI摸鱼</b>，检测人员变化，发现不对直接自动隐藏窗口。可以到<a href="https://b23.tv/CyUNgTE"
-						target="_blank">https://b23.tv/CyUNgTE</a>查看视频解说</p>
-			</li>
+
 			<li class="item">
 				<div class="img">
 
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/09/27/TFf357UCpgkEjqZ.gif" alt="">
 				</div>
-				<p class="text"><b>dnf客户端摸鱼1</b>，用广告的形式把dnf小窗口化，放到桌面右下角，点击就消失并打开浏览器跳转到广告页面，想被人发现都难啊。可以到<a
-						href="https://b23.tv/mH0fE3v" target="_blank">https://b23.tv/mH0fE3v</a>查看视频解说</p>
+				<p class="text"><b>广告摸鱼</b>，用广告的形式把内容（游戏/小说/直播等）展示出来，放到桌面右下角。可以到<a href="https://b23.tv/mH0fE3v"
+						target="_blank">https://b23.tv/mH0fE3v</a>查看视频解说</p>
 			</li>
 			<li class="item">
 				<!-- dnf-transarent -->
 				<div class="img">
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/yL1SoT6fxpbqNHA.gif" alt="">
 				</div>
-				<p class="text"><b>dnf客户端摸鱼2</b>，随意修改DNF客户端的透明度，任意软件都行，非常方便。可以到<a href="https://b23.tv/CUfvJ91"
+				<p class="text"><b>游戏客户端摸鱼</b>，随意修改任意软件的透明度，非常方便。可以到<a href="https://b23.tv/CUfvJ91"
 						target="_blank">https://b23.tv/CUfvJ91</a>查看视频解说</p>
 			</li>
 			<!-- dnfkhd -->
@@ -94,13 +78,13 @@
 				<div class="img">
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/FakQHnzqXy6ms2K.gif" alt="">
 				</div>
-				<p class="text"><b>dnf客户端摸鱼3</b>，自由自在根本不需要担心窗口的差异化，窗口会自动跟着背景变化</p>
+				<p class="text"><b>游戏小窗口</b>注意左上角哦，演示作用</p>
 			</li>
 			<li class="item">
 				<div class="img">
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/11/15/HeQDS1YdqiX9um6.gif" alt="">
 				</div>
-				<p class="text"><b>安全区域摸鱼</b>，特别适合战棋/桌游类的游戏</p>
+				<p class="text"><b>安全区域摸鱼</b>，鼠标放入定制的区域将会自动隐藏和显示软件，特别适合战棋和桌游类的游戏</p>
 			</li>
 			<!-- rwlxs -->
 			<li class="item">
@@ -109,12 +93,12 @@
 				</div>
 				<p class="text"><b>菜单栏摸鱼看小说</b>，这谁会发现啊</p>
 			</li>
-			<li class="item">
-				<div class="img">
-					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/kjng6mA8PWpJZCl.gif" alt="">
-				</div>
-				<p class="text"><b>和平精英网页版</b>，内置游戏无需下载</p>
-			</li>
+			<!-- <li class="item">
+					<div class="img">
+						<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/kjng6mA8PWpJZCl.gif" alt="">
+					</div>
+					<p class="text"><b>和平精英网页版</b>，内置游戏无需下载</p>
+				</li> -->
 			<!-- dnf2 -->
 			<li class="item">
 				<div class="img">
@@ -122,19 +106,19 @@
 				</div>
 				<p class="text"><b>地下城与勇士网页版</b>，内置游戏无需下载</p>
 			</li>
-			<li class="item">
-				<div class="img">
-					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/t6cif1FZVKmTGw3.jpg" alt="">
-				</div>
-				<p class="text"><b>同时看小说，直播，游戏等都可以哦</b>都可以的哦，不止能摸一个</p>
-			</li>
+			<!-- <li class="item">
+					<div class="img">
+						<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/t6cif1FZVKmTGw3.jpg" alt="">
+					</div>
+					<p class="text"><b>同时看小说，直播，游戏等都可以哦</b>都可以的哦，不止能摸一个</p>
+				</li> -->
 			<!-- duoping -->
-			<li class="item">
-				<div class="img">
-					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/DTjY5IHGOnKamsM.gif" alt="">
-				</div>
-				<p class="text"><b>多屏摸鱼</b>展示，小说，直播，和游戏。当然是不局限这几种类型和窗口数量的啊</p>
-			</li>
+			<!-- <li class="item">
+					<div class="img">
+						<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/DTjY5IHGOnKamsM.gif" alt="">
+					</div>
+					<p class="text"><b>多屏摸鱼</b>展示，小说，直播，和游戏。当然是不局限这几种类型和窗口数量的啊</p>
+				</li> -->
 			<!-- <li class="item">
 				<div class="img">
 					<img class="showimg lazyload" data-src="./images/dnf.gif" alt="">
@@ -146,7 +130,7 @@
 				<div class="img">
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/MHQRDcySmJKBfLW.gif" alt="">
 				</div>
-				<p class="text">不止DNF哦，<b>内置许多的游戏网站</b>，都可以进行摸鱼游玩哦</p>
+				<p class="text"><b>内置许多的游戏网站</b>，随时摸鱼游玩哦</p>
 			</li>
 
 			<!-- excel -->
@@ -154,7 +138,14 @@
 				<div class="img">
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/yVs2YKtgnDBRvWu.jpg" alt="">
 				</div>
-				<p class="text"><b>放到excel里</b>，也可以很方便哦</p>
+				<p class="text"><b>小说放到excel里</b>，也可以很方便哦</p>
+			</li>
+			<li class="item">
+				<div class="img">
+					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/GlI3achRS5Dd2EM.gif" alt="">
+				</div>
+				<p class="text"><b>智能隐藏</b>，检测人员变化，发现不对直接自动隐藏窗口。可以到<a href="https://b23.tv/CyUNgTE"
+						target="_blank">https://b23.tv/CyUNgTE</a>查看视频解说</p>
 			</li>
 			<!-- zb -->
 			<li class="item">
@@ -168,10 +159,10 @@
 				<div class="img">
 					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/dRHclrx9EhXpQau.gif" alt="">
 				</div>
-				<p class="text"><b>动态调整透明度</b></p>
+				<p class="text"><b>动态调整视频透明度</b></p>
 			</li>
 		</ul>
-		<h2 class="title" id="online">在线模式</h2>
+		<h2 class="li-title" id="online">在线模式</h2>
 		<ul>
 			<li class="item">
 				<div class="img">
@@ -186,14 +177,14 @@
 				<p class="text"><b>在线搜索漫画</b>且摸鱼观看</p>
 			</li>
 			<!-- xiazai -->
-			<li class="item">
-				<div class="img">
-					<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/SrXVisMhyIn8Avb.jpg" alt="">
-				</div>
-				<p class="text"><b>下载动漫，小说，漫画等</b>，看到想看的完全可以下载下来的哦</p>
-			</li>
+			<!-- <li class="item">
+					<div class="img">
+						<img class="showimg lazyload" data-src="https://s2.loli.net/2023/10/31/SrXVisMhyIn8Avb.jpg" alt="">
+					</div>
+					<p class="text"><b>下载动漫，小说，漫画等</b>，看到想看的完全可以下载下来的哦</p>
+				</li> -->
 		</ul>
-		<h2 class="title" id="diy">自定义模式</h2>
+		<h2 class="li-title" id="diy">自定义模式</h2>
 		<ul>
 			<!-- diydown -->
 			<li class="item">
@@ -211,7 +202,7 @@
 			</li>
 
 		</ul>
-		<h2 class="title" id="jinqun">进群交流反馈</h2>
+		<h2 class="li-title" id="jinqun">进群交流反馈</h2>
 		<ul>
 			<!-- qq -->
 			<li class="item">
@@ -230,30 +221,55 @@
 		</div> -->
 	</div>
 
-	<div class="mask hide">
-		<div class="prompt_box">
-			<div class="prompt_title">
-				APP版支持<span class="error">在线观看和下载漫画、小说、动漫、综艺等</span>
-			</div>
-			<div class="prompt_cont">
-				<div class="prompt_text">
-					<div class="qrcod-box">
-						<p class="qr-title">在线下载-二维码</p>
-						<div class="img online-qrcode qrcode"></div>
-						<a class="link" target="_blank" download="ComicTv.apk"
-							href="http://150.158.92.110/devic/ComicTv.apk">在线地址</a>
-					</div>
-					<div class="qrcod-box">
-						<p class="qr-title">备用蓝奏云-二维码</p>
-						<div class="img lzy-qrcode qrcode"></div>
-						<span class="link lzylink">蓝奏云地址，密码neos</span>
-					</div>
+	<div class="message">
+		<!-- style="left: 50%; transform: translateX(-50%); top: 8px;" -->
+		<div class="ant-message ant-message-top">
+			<div class="ant-message-notice-wrapper">
+				<div class="ant-message-notice-content">
+
 				</div>
-				<!-- <span class="prompt_sure">确定</span> -->
 			</div>
 		</div>
 	</div>
-	<div class="sidebar">
+
+
+	<div class="img-modal" id="imgModal">
+		<p style="color: #ccc;text-align: center;;">提示：键盘←→可以切换哦</p>
+		<img id="imgModalImg" src="" alt="">
+		<p class="text" id="imgDesc"></p>
+	</div>
+	<div class="ant-modal-diy" id="downloadModal">
+		<div class="ant-modal-root">
+			<div class="ant-modal-mask"></div>
+			<div tabindex="-1" class="ant-modal-wrap">
+				<div role="dialog" aria-labelledby=":r6m:" aria-modal="true" class="ant-modal"
+					style="transform-origin: -52px 258px;">
+					<div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
+					<div class="ant-modal-content"><button type="button" aria-label="Close" class="ant-modal-close"><span
+								class="ant-modal-close-x"><span role="img" aria-label="close"
+									class="anticon anticon-close ant-modal-close-icon"><svg fill-rule="evenodd" viewBox="64 64 896 896"
+										focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+										<path
+											d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z">
+										</path>
+									</svg></span></span></button>
+						<div class="ant-modal-header">
+							<div class="ant-modal-title"></div>
+						</div>
+						<div class="ant-modal-body">
+
+						</div>
+						<!-- <div class="ant-modal-footer"><button type="button" class="ant-btn ant-btn-default"><span>取
+									消</span></button><button type="button" class="ant-btn ant-btn-primary"><span>确
+									定</span></button></div> -->
+					</div>
+					<div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="sidebar">
 		<p>导航栏</p>
 		<ul>
 			<li><a href="#moyu">#摸鱼模式</a></li>
@@ -261,6 +277,63 @@
 			<li><a href="#diy">#自定义模式</a></li>
 			<li><a href="#jinqun">#进群交流反馈</a></li>
 		</ul>
+	</div> -->
+	<div class="template" id="downloadctn-tmp">
+		<div class="download-ctn">
+			<!-- mac -->
+			<span class="button" data-type="mac">
+				<svg viewBox="64 64 896 896" focusable="false" data-icon="apple" width="1em" height="1em" fill="currentColor"
+					aria-hidden="true">
+					<path
+						d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z">
+					</path>
+				</svg>
+				MAC版
+			</span>
+			<!-- win -->
+			<span class="button" data-type="win">
+				<svg viewBox="64 64 896 896" focusable="false" data-icon="windows" width="1em" height="1em" fill="currentColor"
+					aria-hidden="true">
+					<path
+						d="M523.8 191.4v288.9h382V128.1zm0 642.2l382 62.2v-352h-382zM120.1 480.2H443V201.9l-322.9 53.5zm0 290.4L443 823.2V543.8H120.1z">
+					</path>
+				</svg>
+				WINDOWS版
+			</span>
+
+			<!-- 安卓版 -->
+			<span class="button" data-type="and">
+				<svg viewBox="64 64 896 896" focusable="false" data-icon="android" width="1em" height="1em" fill="currentColor"
+					aria-hidden="true">
+					<path
+						d="M270.1 741.7c0 23.4 19.1 42.5 42.6 42.5h48.7v120.4c0 30.5 24.5 55.4 54.6 55.4 30.2 0 54.6-24.8 54.6-55.4V784.1h85v120.4c0 30.5 24.5 55.4 54.6 55.4 30.2 0 54.6-24.8 54.6-55.4V784.1h48.7c23.5 0 42.6-19.1 42.6-42.5V346.4h-486v395.3zm357.1-600.1l44.9-65c2.6-3.8 2-8.9-1.5-11.4-3.5-2.4-8.5-1.2-11.1 2.6l-46.6 67.6c-30.7-12.1-64.9-18.8-100.8-18.8-35.9 0-70.1 6.7-100.8 18.8l-46.6-67.5c-2.6-3.8-7.6-5.1-11.1-2.6-3.5 2.4-4.1 7.4-1.5 11.4l44.9 65c-71.4 33.2-121.4 96.1-127.8 169.6h486c-6.6-73.6-56.7-136.5-128-169.7zM409.5 244.1a26.9 26.9 0 1126.9-26.9 26.97 26.97 0 01-26.9 26.9zm208.4 0a26.9 26.9 0 1126.9-26.9 26.97 26.97 0 01-26.9 26.9zm223.4 100.7c-30.2 0-54.6 24.8-54.6 55.4v216.4c0 30.5 24.5 55.4 54.6 55.4 30.2 0 54.6-24.8 54.6-55.4V400.1c.1-30.6-24.3-55.3-54.6-55.3zm-658.6 0c-30.2 0-54.6 24.8-54.6 55.4v216.4c0 30.5 24.5 55.4 54.6 55.4 30.2 0 54.6-24.8 54.6-55.4V400.1c0-30.6-24.5-55.3-54.6-55.3z">
+					</path>
+				</svg>
+				安卓版
+			</span>
+			<div>
+				<!-- 备用网盘下载 -->
+				<span class="button link" data-type="baidulink">
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="chrome" width="1em" height="1em" fill="currentColor"
+						aria-hidden="true">
+						<path
+							d="M371.8 512c0 77.5 62.7 140.2 140.2 140.2S652.2 589.5 652.2 512 589.5 371.8 512 371.8 371.8 434.4 371.8 512zM900 362.4l-234.3 12.1c63.6 74.3 64.6 181.5 11.1 263.7l-188 289.2c78 4.2 158.4-12.9 231.2-55.2 180-104 253-322.1 180-509.8zM320.3 591.9L163.8 284.1A415.35 415.35 0 0096 512c0 208 152.3 380.3 351.4 410.8l106.9-209.4c-96.6 18.2-189.9-34.8-234-121.5zm218.5-285.5l344.4 18.1C848 254.7 792.6 194 719.8 151.7 653.9 113.6 581.5 95.5 510.5 96c-122.5.5-242.2 55.2-322.1 154.5l128.2 196.9c32-91.9 124.8-146.7 222.2-141z">
+						</path>
+					</svg>
+					备用网盘百度云下载
+				</span>
+				<!-- 备用网盘下载 -->
+				<span class="button link" data-type="lanzoulink">
+					<svg viewBox="64 64 896 896" focusable="false" data-icon="chrome" width="1em" height="1em" fill="currentColor"
+						aria-hidden="true">
+						<path
+							d="M371.8 512c0 77.5 62.7 140.2 140.2 140.2S652.2 589.5 652.2 512 589.5 371.8 512 371.8 371.8 434.4 371.8 512zM900 362.4l-234.3 12.1c63.6 74.3 64.6 181.5 11.1 263.7l-188 289.2c78 4.2 158.4-12.9 231.2-55.2 180-104 253-322.1 180-509.8zM320.3 591.9L163.8 284.1A415.35 415.35 0 0096 512c0 208 152.3 380.3 351.4 410.8l106.9-209.4c-96.6 18.2-189.9-34.8-234-121.5zm218.5-285.5l344.4 18.1C848 254.7 792.6 194 719.8 151.7 653.9 113.6 581.5 95.5 510.5 96c-122.5.5-242.2 55.2-322.1 154.5l128.2 196.9c32-91.9 124.8-146.7 222.2-141z">
+						</path>
+					</svg>
+					备用网盘蓝奏云下载
+				</span>
+			</div>
+		</div>
 	</div>
 </body>
 
@@ -269,6 +342,7 @@
 	$(document).ready(function() {
 		$('.lazyload').lazyload();
 	});
+
 	/* $(window).on('load', function() {
 		$('.lazyload').each(function() {
 			$(this).attr('src', $(this).data('src'));
@@ -276,150 +350,74 @@
 	}); */
 </script>
 <script>
-	function getOs() {
-		var UserAgent = navigator.userAgent.toLowerCase();
-		return {
-			isIpad: /ipad/.test(UserAgent),
-			isIphone: /iphone os/.test(UserAgent),
-			isAndroid: /android/.test(UserAgent),
-			isWindowsMobile: /windows mobile/.test(UserAgent),
-			isWin2K: /windows nt 5.0/.test(UserAgent),
-			isXP: /windows nt 5.1/.test(UserAgent),
-			isVista: /windows nt 6.0/.test(UserAgent),
-			isWin7: /windows nt 6.1/.test(UserAgent),
-			isWin8: /windows nt 6.2/.test(UserAgent),
-			isWin81: /windows nt 6.3/.test(UserAgent),
-			isWin: /windows/.test(UserAgent),
-			isMac: /mac os/.test(UserAgent)
-		};
-
+	var messageNode = $('.message')[0]
+	let timmer = null
+	function showMessage(txt) {
+		show(messageNode)
+		$('.ant-message-notice-content').html(txt)
+		clearTimeout(timmer)
+		timmer = setTimeout(() => {
+			hide(messageNode)
+		}, 5000)
 	}
-	function copy(str) {
-		str = str || ''
-		if (str.length == 0) {
-			return false
+	// 
+
+	const evtMap = {
+		lanzoulink() {
+			copy('neos')
+			alert('已复制密码')
+			window.open('https://wwt.lanzouq.com/b02dht9ab')
+		},
+		baidulink() {
+			window.open('https://pan.baidu.com/s/13CYxAiRxMEarnaDDKrY_3w?pwd=neos')
 		}
-		var doc = document,
-			body = doc.getElementsByTagName('body')[0]
-		var input = doc.createElement('input')
-		input.type = 'text'
-		input.value = str
-		input.style.opacity = 0
-		input.style.position = 'absolute'
-		input.style.left = 0
-		input.style.top = 0
-
-		body.appendChild(input)
-
-		input.select()
-		document.execCommand('Copy')
-		body.removeChild(input)
-		return true
 	}
-	function hide(node) {
-		const len = node.length
-		if (len > 1) {
-			for (i = len; i--;) {
-				node[i].style.display = 'none'
-			}
+	$(document).on('click', '.download-ctn .button', function() {
+		const $btn = $(this)
+		const type = ($btn.data('type'))
+
+		if (evtMap[type]) {
+			evtMap[type]()
 		} else {
+			$.ajax({
+				method: 'get',
+				url: '/dn',
+				data: {
+					type
+				},
+				success(res) {
+					if (res.success) {
+						window.open(res.url)
+					} else {
+						showMessage('地址获取失败，建议去备用网盘下载')
+					}
+				},
+				error() {
+					showMessage('地址获取失败，建议去备用网盘下载')
 
-			node.style.display = 'none'
+				}
+			})
 		}
-	}
-	function show(node) {
-		node.style.display = 'block'
-	}
-	/* imgModalVideo.onclick = function(e) {
-		e.stopPropagation()
-	} */
-
-	function showModal(node) {
-		const type = node.tagName.toLowerCase()
-		if (type === 'img') {
-			imgModalImg.src = node.src
-			show(imgModalImg)
-			hide(imgModalVideo)
-		} else {
-			imgModalVideo.src = node.src
-			show(imgModalVideo)
-			hide(imgModalImg)
-		}
-		show(imgModal)
-	}
-
-	$(document).on('click', '.mask', function() {
-		$('.mask').addClass('hide');
-
-	})
-	$(document).on('click', '.prompt_box', function(e) {
-		e.stopPropagation()
-	})
-	function showDialog(html) {
-		$('.prompt_text').html(html);
-		$('.mask').removeClass('hide');
-	}
-
-	jQuery('.online-qrcode').qrcode("http://150.158.92.110/devic/ComicTv.apk");
-	jQuery('.lzy-qrcode').qrcode("https://wwt.lanzouq.com/b02dht9ab");
-
-</script>
-<script>
-
-	imgModal.onclick = function(e) {
-		e.stopPropagation()
-		hide(this)
-	}
-	// 打开图片弹窗
-	$(document).on('click', '.img', function(e) {
-		showModal($(this).find('.showimg')[0])
-	})
-	/* document.addEventListener('click', function(e) {
-
-		const node = findNode(e.target, 'div.img')
-		if (!node) {
-			return
-		}
-		showModal(node.querySelector('.showimg'))
-		console.log(node)
-		// console.log(this)
-	}) */
-	$(document).on('click', '.lzylink', (e) => {
-		e.stopPropagation()
-		copy('neos')
-		alert('已复制密码')
-		window.open('https://wwt.lanzouq.com/b02dht9ab')
-		window.open('https://wwzl.lanzoux.com/b02dht9ab')
 	})
 
+	const downloadModal = $('#downloadModal')[0]
 
-	/* const os = getOs()
-	downloadBtn.onclick = function() {
-		if (os.isMac) {
-			window.open('http://150.158.92.110/comictv/latest.zip', 'newwindow')
-		} else {
-			window.open('http://150.158.92.110/comictv/latest.exe', 'newwindow')
-		}
+	// 下载按钮弹窗
+	$('#downloadbutton')[0].onclick = function(e) {
+		show(downloadModal)
+		showAntModal('下载', $('#downloadctn-tmp').html(), 540)
 	}
-	downloadBtnapp.onclick = function() {
-		showDialog()
-		// jQuery('#output').qrcode("https://www.jq22.com")
-	} */
+	$('.ant-modal-close').on('click', function() {
+		hide(downloadModal)
+	})
 
-</script>
-
-<script>
-	function getUrlParams(url = '') {
-		const map = {}
-		url.split('&').map(it => {
-			const [key, val] = it.split('=')
-			map[key] = val
+	function showAntModal(title, ctn, width = 520) {
+		$('.ant-modal-title').html(title)
+		$('.ant-modal-body').html(ctn)
+		$('.ant-modal').css({
+			width: width + 'px'
 		})
-		return map
 	}
-	const params = getUrlParams(window.location.href.split('?')[1])
-	// console.log(params)
-	if (params.nomoyu === '1') {
-		hide(document.querySelectorAll('.nomoyu-key'))
-	}
+
 </script>
+<script src="./index.js"></script>
