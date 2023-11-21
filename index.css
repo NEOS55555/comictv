@@ -83,6 +83,10 @@
 	overflow: hidden;
 }
 
+.content ul li .img.autoheight {
+	height: auto;
+}
+
 .content ul li .img video {
 	width: 100%;
 }
@@ -173,6 +177,18 @@
 
 	.sidebar {
 		display: none;
+	}
+
+	.title-ctn {
+		flex-direction: column;
+	}
+
+	.title-ctn nav {
+		display: none;
+	}
+
+	.title-ctn #downloadbutton {
+		margin-top: 20px;
 	}
 }
 

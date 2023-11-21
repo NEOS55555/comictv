@@ -25,6 +25,9 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+.button * {
+  vertical-align: middle;
+}
 
 .button.normal {
   background-color: transparent;
@@ -79,7 +82,7 @@ a {
   /* height: 52px; */
   /* line-height: 52px; */
   padding: 20px 0;
-  width: 1100px;
+  max-width: 1100px;
   margin: auto;
   justify-content: space-between;
 }
