@@ -316,6 +316,16 @@
 				</svg>
 				安卓版
 			</span>
+			<!-- win -->
+			<span class="button link" data-type="winlink">
+				<svg viewBox="64 64 896 896" focusable="false" data-icon="windows" width="1em" height="1em" fill="currentColor"
+					aria-hidden="true">
+					<path
+						d="M523.8 191.4v288.9h382V128.1zm0 642.2l382 62.2v-352h-382zM120.1 480.2H443V201.9l-322.9 53.5zm0 290.4L443 823.2V543.8H120.1z">
+					</path>
+				</svg>
+				WINDOWS免安装版
+			</span>
 			<div>
 				<!-- 备用网盘下载 -->
 				<span class="button link" data-type="baidulink">
@@ -375,6 +385,9 @@
 		},
 		baidulink() {
 			window.open('https://pan.baidu.com/s/13CYxAiRxMEarnaDDKrY_3w?pwd=neos')
+		},
+		winlink() {
+			window.open('https://cowtransfer.com/s/5949c8077f2d4d')
 		}
 	}
 	$(document).on('click', '.download-ctn .button', function() {
